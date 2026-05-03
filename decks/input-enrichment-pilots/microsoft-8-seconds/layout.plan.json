@@ -1,0 +1,137 @@
+{
+  "principles": [
+    "Standalone pilot deck generated from enriched brief, not direct source-to-slide conversion.",
+    "Keep 12 core slides between starter and appendix.",
+    "Use provocative CXO language while proof-gating sensitive claims.",
+    "Make the AxlFlo sales motion direct by the final core slide.",
+    "Show the enriched brief as an example of agentic engineering discipline."
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "title",
+      "creative_intent": "Starter slide that sets the provocation without overclaiming.",
+      "density": "low",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "title block and closing line"
+    },
+    {
+      "slide": 2,
+      "render_as": "storyCards",
+      "creative_intent": "Open the 12-slide core with the 8-second hook and a verification distinction.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": true,
+      "visual_anchor": "verified vs source-alleged cards"
+    },
+    {
+      "slide": 3,
+      "render_as": "storyCards",
+      "creative_intent": "Make AI panic feel like a market mechanism CXOs must recognize.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three commercial-pressure cards"
+    },
+    {
+      "slide": 4,
+      "render_as": "storyCards",
+      "creative_intent": "Reject the optimism/skepticism binary and move toward operating discipline.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "useful vs sufficient vs automatic"
+    },
+    {
+      "slide": 5,
+      "render_as": "frameworkRows",
+      "creative_intent": "Translate the Automation Audit into a CXO decision gate.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "four gate table"
+    },
+    {
+      "slide": 6,
+      "render_as": "storyCards",
+      "creative_intent": "Make trust the executive bottleneck.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three trust-risk cards"
+    },
+    {
+      "slide": 7,
+      "render_as": "sectionDivider",
+      "creative_intent": "Bridge the source argument to AxlFlo's agentic-engineering thesis.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "large system statement"
+    },
+    {
+      "slide": 8,
+      "render_as": "systemArchitecture",
+      "creative_intent": "Show the governed wrapper around agents as an operating model.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "versioned files and live owners"
+    },
+    {
+      "slide": 9,
+      "render_as": "conceptMap",
+      "creative_intent": "Map software engineering concepts to agentic engineering and executive payoff.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "concept translation matrix"
+    },
+    {
+      "slide": 10,
+      "render_as": "processCycle",
+      "creative_intent": "Use this deck engine as the meta case study and proof.",
+      "density": "high",
+      "background": "dark",
+      "number_led": true,
+      "visual_anchor": "five-step process"
+    },
+    {
+      "slide": 11,
+      "render_as": "frameworkRows",
+      "creative_intent": "Show the enriched brief as the structured-argument layer.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "brief fields mapped to executive purpose"
+    },
+    {
+      "slide": 12,
+      "render_as": "roadmapPhases",
+      "creative_intent": "Turn the argument into a direct AxlFlo engagement path.",
+      "density": "medium",
+      "background": "white",
+      "number_led": true,
+      "visual_anchor": "four phase commercial path"
+    },
+    {
+      "slide": 13,
+      "render_as": "ctaClosing",
+      "creative_intent": "Close the 12 core slides with direct AxlFlo sales motion.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three engagement offers"
+    },
+    {
+      "slide": 14,
+      "render_as": "disclaimer",
+      "creative_intent": "Appendix with source and verification notes.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "source note block"
+    }
+  ]
+}

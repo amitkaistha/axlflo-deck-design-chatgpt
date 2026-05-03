@@ -7,8 +7,8 @@ const path = require("path");
 const pptxPath = process.argv[2] ? path.resolve(process.argv[2]) : null;
 const manifestPath = process.argv[3] ? path.resolve(process.argv[3]) : null;
 
-const LEGAL_TEXT = "SHIFT to Scale™ is a proprietary framework";
-const LEGAL_TEXT_ASCII = "SHIFT to Scale is a proprietary framework";
+const LEGAL_TEXT = "SHIFT to SCALE™ is a proprietary framework";
+const LEGAL_TEXT_ASCII = "SHIFT to SCALE is a proprietary framework";
 const CREAM = "F5EDD6";
 
 function failUsage() {
@@ -90,7 +90,7 @@ function main() {
   const feedbackPath = path.join(path.dirname(__dirname), "docs", "FEEDBACK_LOOP.md");
   if (fs.existsSync(feedbackPath)) {
     const feedback = fs.readFileSync(feedbackPath, "utf8");
-    ["AFL-FB-001", "AFL-FB-002", "AFL-FB-003", "AFL-FB-004"].forEach(id => {
+    ["AFL-FB-001", "AFL-FB-002", "AFL-FB-003", "AFL-FB-004", "AFL-FB-005", "AFL-FB-006"].forEach(id => {
       feedback.includes(id)
         ? pass(`${id}: present in approved feedback register`)
         : fail(`${id}: missing from approved feedback register`);

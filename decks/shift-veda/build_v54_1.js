@@ -15,8 +15,8 @@ const manifestPath = path.join(outDir, "shift_to_scale_veda_proof_v54_manifest.j
 const pptx = new pptxgen();
 pptx.author = "Amit Kaistha, AxlFlo";
 pptx.company = "AxlFlo LLC";
-pptx.subject = "SHIFT to Scale — VEDA proof deck";
-pptx.title = "SHIFT to Scale — Every Player. Messi-Level.";
+pptx.subject = "SHIFT to SCALE — VEDA proof deck";
+pptx.title = "SHIFT to SCALE — Every Player. Messi-Level.";
 pptx.lang = "en-US";
 pptx.theme = {
   headFontFace: "Segoe UI",
@@ -28,7 +28,7 @@ pptx.layout = "AXLFLO";
 
 const C = E.C;
 const SEQ = E.SEQ;
-const FOOTER = "SHIFT to Scale™ is a proprietary framework by AxlFlo LLC.";
+const FOOTER = "SHIFT to SCALE™ is a proprietary framework by AxlFlo LLC.";
 const DISCLAIMER = "SHIFT to SCALE is a proprietary framework by AxlFlo LLC";
 
 function darkBase(sl, gb) {
@@ -129,7 +129,7 @@ function addSlide1(gb) {
   const sl = pptx.addSlide();
   darkBase(sl, gb);
   E.addLogoArea(sl, pptx);
-  sl.addText("SHIFT to Scale™", { x:0.45, y:0.72, w:5.7, h:0.65, fontFace:"Segoe UI", fontSize:40, bold:true, color:C.white, margin:0, fit:"shrink" });
+  sl.addText("SHIFT to SCALE™", { x:0.45, y:0.72, w:5.7, h:0.65, fontFace:"Segoe UI", fontSize:40, bold:true, color:C.white, margin:0, fit:"shrink" });
   sl.addShape(pptx.ShapeType.rect, { x:0.45, y:1.55, w:5.45, h:0.36, fill:{ color:C.cardNavy }, line:{ color:C.cardBorder, width:0.5 } });
   sl.addText("From Prompt to System. From Individual to Enterprise.", { x:0.62, y:1.67, w:5.1, h:0.12, fontFace:"Segoe UI", fontSize:11.5, color:C.coolGrey, margin:0, fit:"shrink" });
   sl.addText("AI adoption starts with a SHIFT. ROI requires a System.", { x:0.45, y:2.18, w:5.6, h:0.34, fontFace:"Segoe UI", fontSize:17, color:C.white, margin:0, fit:"shrink" });
@@ -199,7 +199,7 @@ function addSlide5(gb) {
 
 function addSlide6(gb) {
   const sl = pptx.addSlide();
-  whiteBase(sl, gb, "THE FRAMEWORK", "SHIFT to Scale™ — Five Pillars. One System.");
+  whiteBase(sl, gb, "THE FRAMEWORK", "SHIFT to SCALE™ — Five Pillars. One System.");
   sl.addText("SHIFT is not a training programme. It is a change architecture — designed to move AI from individual performance to enterprise capability.", { x:0.35, y:1.20, w:9.3, h:0.28, fontFace:"Segoe UI", fontSize:11.3, italic:true, color:C.inkNavy, margin:0, fit:"shrink" });
   const rows = [
     ["S", "Strategise", "Define use cases by role before deploying AI. Align to business outcomes, not feature lists.", "Deployment becomes a solution looking for a problem. Adoption never sticks."],

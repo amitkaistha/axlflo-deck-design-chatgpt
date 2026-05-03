@@ -6,6 +6,30 @@ Detailed design deltas still live in [skill/SKILL_merged.md](skill/SKILL_merged.
 
 ## Unreleased
 
+No unreleased changes.
+
+## v5.10.0 - May 2026
+
+Brain-led concept slides.
+
+- Promoted `AFL-FB-006` in [docs/FEEDBACK_LOOP.md](docs/FEEDBACK_LOOP.md): use brain-led creative concept slides when the idea needs more than a catalogue layout.
+- Added the [docs/AXLFLO_CREATIVE_SYSTEM.md](docs/AXLFLO_CREATIVE_SYSTEM.md) section "Brain-Led Concept Slides".
+- Clarified that [SLIDE_CATALOGUE.md](SLIDE_CATALOGUE.md) is a renderer vocabulary, not the creative ceiling.
+- Set the next-build regression expectation: visual/design QA must ask whether key thesis or concept slides deserve a custom visual metaphor instead of being forced into generic cards.
+- Reference build: `output/agentic_deck_system_single_slide.pptx`, which passed structural QA with 8 passed, 0 warnings, and 0 failures.
+
+## v5.9.0 - May 2026
+
+Visual variant catalogue.
+
+- Added [docs/VISUAL_VARIANT_CATALOGUE.md](docs/VISUAL_VARIANT_CATALOGUE.md) as the approved visual vocabulary for premium CXO deck generation.
+- Added [schema/axlflo.visual-variants.json](schema/axlflo.visual-variants.json) as a machine-readable catalogue mapping slide intent to approved visual variants.
+- Catalogued proven variants from the SHIFT to SCALE v3.0 and System Behind the Star reference decks, including evidence dashboards, framework maps, sprint roadmaps, architecture boards, translation matrices, use-case deep dives, and commercial CTA packages.
+- Clarified that experimental renderer variants must not be used in client-facing decks until visually approved or rebuilt to match the premium reference vocabulary.
+- Promoted the design principle: visual variety is mandatory, but visual quality beats novelty.
+
+## v5.8.1 - May 2026
+
 Feature governance.
 
 - Added [FEATURE_LOG.md](FEATURE_LOG.md) to track proposed system improvements without promoting them directly into the production deck workflow.
@@ -22,7 +46,7 @@ Feedback reinforcement loop.
 - Added a feedback classification model: `fix_now`, `promote_to_rule`, `watchlist`, and `reject`.
 - Added an approval gate: feedback is not promoted into the system until Amit approves it.
 - Added an approved feedback register for reusable rules that future builds must regression-check.
-- Seeded the register with lessons from the SHIFT to Scale CXO deck:
+- Seeded the register with lessons from the SHIFT to SCALE CXO deck:
   - No repeated legal/framework footer on normal slides.
   - Legal/framework statement belongs on the disclaimer slide unless explicitly requested.
   - Maximum one `#F5EDD6` cream quote/takeaway box per slide.

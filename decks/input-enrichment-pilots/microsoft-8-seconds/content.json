@@ -1,0 +1,372 @@
+{
+  "deck": {
+    "id": "microsoft-8-seconds-agentic-engineering-pilot-v1",
+    "title": "The 8 Seconds Problem",
+    "subtitle": "Why CXOs Should Stop Buying AI Panic and Start Engineering the Work",
+    "version": "pilot-v1",
+    "brand": "AxlFlo",
+    "author": "Amit Kaistha",
+    "email": "amit.kaistha@axlflo.ai",
+    "footer": "This deck is an AxlFlo pilot narrative built from a source-backed enriched brief.",
+    "source_files": [
+      "decks/input-enrichment-pilots/microsoft-8-seconds/enriched.brief.json",
+      "c:\\Users\\amitk\\Downloads\\The 8 Seconds Microsoft Tried to Delete From the Internet — The AI OS.pdf"
+    ],
+    "intent": "Standalone CXO sales-motion deck generated from an enriched brief, with 12 core slides plus starter and appendix."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "title": "The 8 Seconds Problem",
+      "subtitle": "A CXO deck on AI hype, trust, and engineered automation.",
+      "tagline": "The model is not the operating model. The system around it is where enterprise value is won or lost.",
+      "byline": "Amit Kaistha · AxlFlo · amit.kaistha@axlflo.ai",
+      "closing": "Do not automate the panic. Engineer the work."
+    },
+    {
+      "type": "hook",
+      "section": "THE PROVOCATION",
+      "title": "Eight Seconds Became the Perfect AI Leadership Test.",
+      "body": [
+        "A source article claims an 8-second segment from a Microsoft AI interview later disappeared from the official video. The claim is sharp. The lesson is sharper.",
+        "The widely reported statement was that most professional computer-based tasks could be fully automated within 12 to 18 months.",
+        "A CXO does not need another panic headline. A CXO needs a way to separate automation theatre from operational truth."
+      ],
+      "quote": "The deleted moment is less important than the decision it exposes: will leaders buy the panic, or engineer the work?",
+      "cards": [
+        {
+          "title": "Verified",
+          "body": "The 12-18 month automation claim is independently reported across multiple outlets."
+        },
+        {
+          "title": "Not fully verified",
+          "body": "The edit/deletion claim remains source-alleged unless validated through the original video or archive."
+        }
+      ],
+      "closing": "The right response to AI hype is not disbelief. It is due diligence."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE MARKET MECHANIC",
+      "title": "AI Panic Is a Sales Motion Disguised as a Forecast.",
+      "intro": "When the claim is existential, budgets move faster. That does not make the forecast wrong, but it does make the incentive structure impossible to ignore.",
+      "cards": [
+        {
+          "title": "Fear creates urgency",
+          "body": "If every professional task is about to be automated, delay feels irresponsible. That is powerful commercial pressure."
+        },
+        {
+          "title": "Urgency sells platforms",
+          "body": "Panic moves enterprises from strategy to procurement before operating readiness is understood."
+        },
+        {
+          "title": "Procurement hides risk",
+          "body": "Licences are easy to buy. Governed workflows, verification loops, and ownership models are harder to build."
+        }
+      ],
+      "quote": "A claim can be commercially useful before it is operationally true.",
+      "closing": "The issue is not whether AI is useful. It is whether the enterprise is ready to trust it."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE FALSE CHOICE",
+      "title": "This Is Not AI Optimism Versus AI Skepticism.",
+      "intro": "The mature position is more uncomfortable: AI is already useful, but usefulness is not the same as enterprise-grade automation.",
+      "cards": [
+        {
+          "title": "Useful",
+          "body": "Summaries, drafts, classification, search, refactoring, analysis support, and workflow assistance can create real productivity."
+        },
+        {
+          "title": "Not sufficient",
+          "body": "A plausible answer is not an accountable outcome. Work needs correctness, context, ownership, and recoverability."
+        },
+        {
+          "title": "Not automatic",
+          "body": "Enterprise value appears when AI is wrapped in rules, review, tests, telemetry, approvals, and feedback loops."
+        }
+      ],
+      "quote": "The dangerous question is not 'Can AI do it?' It is 'Can the business trust the result?'",
+      "closing": "A demo proves capability. A system proves repeatability."
+    },
+    {
+      "type": "table",
+      "section": "THE EXECUTIVE LENS",
+      "title": "The Automation Audit: Four Gates Before You Scale.",
+      "intro": "Before automating a workflow, leaders need a fast way to decide whether AI should own it, assist it, or stay away from it.",
+      "columns": [
+        "Gate",
+        "Question",
+        "CXO Translation",
+        "If It Fails"
+      ],
+      "rows": [
+        [
+          "1",
+          "Verifiable",
+          "Can a human or system confirm the answer quickly?",
+          "You create invisible quality risk."
+        ],
+        [
+          "2",
+          "Bounded",
+          "Is the input small and controlled enough for the model?",
+          "The model guesses around missing context."
+        ],
+        [
+          "3",
+          "Reversible",
+          "Can a mistake be undone without real damage?",
+          "You expose reputation, money, or compliance."
+        ],
+        [
+          "4",
+          "Repetitive",
+          "Will the workflow repeat enough to justify design effort?",
+          "You automate novelty and create cleanup work."
+        ]
+      ],
+      "closing": "Four gates passed: automate. Three: augment. Two or fewer: keep human ownership."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE TRUST GAP",
+      "title": "The Output Looks Right Before It Is Right.",
+      "intro": "That is the executive risk. LLMs produce confident language before the business has proof, accountability, or consequence attached to the result.",
+      "cards": [
+        {
+          "title": "Language is not evidence",
+          "body": "The model can produce a plausible answer even when the underlying work has not been truly checked."
+        },
+        {
+          "title": "Speed amplifies mistakes",
+          "body": "Bad logic at low volume is a training issue. Bad logic at AI speed is an operating-control issue."
+        },
+        {
+          "title": "Trust needs design",
+          "body": "Verification, boundaries, rollback, approval, and feedback must be built into the workflow."
+        }
+      ],
+      "quote": "Trust is the real automation bottleneck.",
+      "closing": "The board should not ask only what AI can produce. It should ask how the result is proven."
+    },
+    {
+      "type": "section",
+      "section": "THE REAL SHIFT",
+      "title": "The Model Is the Engine. The System Is the Business.",
+      "body": [
+        "The strongest AI use cases do not succeed because somebody wrote a clever prompt. They succeed because the model is surrounded by software discipline.",
+        "Rules define what the model is allowed to do. Tests catch regressions. Versioning explains what changed. Human approval owns consequence. Feedback turns failures into system memory.",
+        "That is the difference between automation as theatre and agentic engineering as an operating model."
+      ],
+      "closing": "AxlFlo helps leaders turn AI from individual experimentation into governed enterprise capability."
+    },
+    {
+      "type": "architecture",
+      "section": "THE AXLFLO OPERATING MODEL",
+      "title": "Build the Wrapper Before You Trust the Agent.",
+      "intro": "Enterprise AI becomes useful when the agent is placed inside a governed workflow, not when it is given more freedom by default.",
+      "files": [
+        {
+          "file": "Intent",
+          "status": "Versioned",
+          "role": "Define the business outcome, user, boundary, and decision being supported."
+        },
+        {
+          "file": "Rules",
+          "status": "Versioned",
+          "role": "Codify the standards, constraints, examples, and failure modes."
+        },
+        {
+          "file": "QA Gates",
+          "status": "Versioned",
+          "role": "Test structure, facts, formatting, regressions, and business acceptance criteria."
+        },
+        {
+          "file": "Feedback",
+          "status": "Versioned",
+          "role": "Convert approved human corrections into reusable system memory."
+        },
+        {
+          "file": "Agent",
+          "status": "Live",
+          "role": "Executes bounded work using the approved context, rules, and tools."
+        },
+        {
+          "file": "Human Owner",
+          "status": "Live",
+          "role": "Approves judgment calls, accepts risk, and decides when the system is ready."
+        }
+      ],
+      "closing": "Autonomy without a wrapper is not transformation. It is unmanaged delegation."
+    },
+    {
+      "type": "conceptMap",
+      "section": "THE ENGINEERING BRIDGE",
+      "title": "Software Engineering Already Solved Half of This Problem.",
+      "intro": "Agentic engineering is not a new religion. It is software engineering discipline applied to probabilistic workers.",
+      "columns": [
+        "Software discipline",
+        "Agentic operating model",
+        "Executive payoff"
+      ],
+      "rows": [
+        [
+          "Requirements",
+          "Structured enriched brief before any slide, workflow, or agent output",
+          "The system works on the real problem, not the first prompt."
+        ],
+        [
+          "Version control",
+          "Content, rules, feedback, and layouts are tracked as governed artifacts",
+          "Leaders know what changed and why."
+        ],
+        [
+          "Test gates",
+          "QA runs before output is called ready",
+          "Quality becomes a release condition, not a hope."
+        ],
+        [
+          "Separation of concerns",
+          "Source, argument, design, rendering, and approval have defined roles",
+          "Creativity increases without losing control."
+        ],
+        [
+          "Regression learning",
+          "Approved feedback becomes reusable build discipline",
+          "Every iteration improves the engine."
+        ]
+      ],
+      "closing": "Automation repeats steps. Autonomy makes choices. Engineering decides which choices are allowed."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE CASE STUDY",
+      "title": "This Deck Is the Proof of the Argument.",
+      "intro": "We did not paste a PDF into a slide generator. We converted the source into an enriched argument, verified sensitive claims, selected visual forms, and built from JSON.",
+      "cards": [
+        {
+          "title": "Raw source",
+          "body": "PDF and article link are captured as source artifacts, with verification status documented."
+        },
+        {
+          "title": "Enriched brief",
+          "body": "The story, tension, shift, proof needs, visual opportunities, CTA, and open questions are structured first."
+        },
+        {
+          "title": "Deck JSON",
+          "body": "Slides become a renderable plan, not a one-off prompt transcript."
+        },
+        {
+          "title": "QA and feedback",
+          "body": "Build checks and human feedback refine the system instead of disappearing after one run."
+        },
+        {
+          "title": "Sales motion",
+          "body": "The output becomes a CXO conversation about building governed AI workflows."
+        }
+      ],
+      "quote": "The best proof of an agentic system is whether it can build itself without losing control.",
+      "closing": "The deck is not just about agentic engineering. It was produced by it."
+    },
+    {
+      "type": "mapping",
+      "section": "THE ENRICHED BRIEF EXAMPLE",
+      "title": "The Brief Turns Raw Text Into an Executive Argument.",
+      "intro": "This is the missing layer between input and slides. It prevents raw content from becoming shallow slide copy.",
+      "rows": [
+        [
+          "Story",
+          "A provocative AI prediction exposes the difference between market narrative and enterprise operating reality."
+        ],
+        [
+          "Tension",
+          "The market rewards urgency, but the business needs verification, ownership, and trust."
+        ],
+        [
+          "Shift",
+          "Move from buying AI capacity to engineering AI work."
+        ],
+        [
+          "Proof",
+          "Separate verified automation claims from source-alleged edit claims; use the deck engine as proof of discipline."
+        ],
+        [
+          "CTA",
+          "Run an AxlFlo automation audit on one high-value workflow before scaling agents."
+        ]
+      ],
+      "closing": "Do not convert text directly into slides. Convert text into a structured argument first."
+    },
+    {
+      "type": "roadmap",
+      "section": "THE SALES MOTION",
+      "title": "AxlFlo Helps You Decide What AI Should Be Allowed to Do.",
+      "phases": [
+        {
+          "timeframe": "Week 1",
+          "title": "Audit",
+          "body": "Score target workflows for verifiability, boundedness, reversibility, repetition, value, and risk."
+        },
+        {
+          "timeframe": "Weeks 2-3",
+          "title": "Engineer",
+          "body": "Create the enriched brief, rulebook, examples, QA gate, approval path, and versioned system files."
+        },
+        {
+          "timeframe": "Weeks 4-6",
+          "title": "Pilot",
+          "body": "Run a bounded workflow with measured output quality, human approval, and feedback capture."
+        },
+        {
+          "timeframe": "Quarter 2",
+          "title": "Scale",
+          "body": "Convert the proven workflow into an enterprise operating pattern across teams."
+        }
+      ],
+      "quote": "Do not ask where AI can replace people. Ask where engineered AI can safely raise the operating floor.",
+      "closing": "The first engagement is not a transformation programme. It is a controlled proof of operating leverage."
+    },
+    {
+      "type": "cta",
+      "title": "Stop Buying Agents. Start Building Operating Leverage.",
+      "body": "AxlFlo works with CXO teams to identify which workflows should be automated, augmented, or protected from automation, then builds the governed system around the right ones.",
+      "engagements": [
+        {
+          "title": "Automation Audit",
+          "duration": "1-2 weeks",
+          "body": "Score the workflows where AI could create value or risk."
+        },
+        {
+          "title": "Agentic Workflow Pilot",
+          "duration": "4-6 weeks",
+          "body": "Build one governed, tested, feedback-driven workflow."
+        },
+        {
+          "title": "Scale Architecture",
+          "duration": "Quarterly",
+          "body": "Turn pilot learning into reusable enterprise capability."
+        }
+      ],
+      "contact": "Amit Kaistha · amit.kaistha@axlflo.ai",
+      "tagline": "Do not automate the panic. Engineer the work."
+    },
+    {
+      "type": "disclaimer",
+      "title": "Appendix: Source, Verification, and Use Notes",
+      "body": [
+        "This deck was generated from an enriched brief built from the provided PDF: The 8 Seconds Microsoft Tried to Delete From the Internet - The AI OS.",
+        "The 12-18 month professional-task automation claim is independently reported by multiple outlets as originating from a Financial Times interview with Microsoft AI CEO Mustafa Suleyman.",
+        "The claim that an 8-second segment was removed from the official video is treated as source-alleged in this version. It should be independently verified through the original video, archive material, or FT source before being stated as fact in external distribution.",
+        "The Automation Audit is adapted from the provided source into CXO language. Any external use should decide whether to attribute, adapt, or replace the framework with an AxlFlo-native model.",
+        "AxlFlo framing, CTA, and agentic-engineering language are derived from the enriched-brief workflow and the deck-engine case study.",
+        "SHIFT to SCALE™ is a proprietary framework by AxlFlo LLC. This pilot applies the same deck-engine discipline to a standalone AI narrative."
+      ],
+      "engine_note": "Built from structured JSON after source enrichment, verification gating, layout planning, and renderer execution."
+    }
+  ]
+}

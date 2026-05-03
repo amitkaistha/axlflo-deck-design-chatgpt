@@ -1,13 +1,13 @@
 {
   "deck": {
     "id": "shift-to-scale-final-from-source-v1",
-    "title": "SHIFT to Scale™",
+    "title": "SHIFT to SCALE™",
     "subtitle": "From Prompt to System. From Individual to Enterprise.",
     "version": "final-from-source-v1",
     "brand": "AxlFlo",
     "author": "Amit Kaistha",
     "email": "amit.kaistha@axlflo.ai",
-    "footer": "SHIFT to Scale™ is a proprietary framework by AxlFlo LLC.",
+    "footer": "SHIFT to SCALE™ is a proprietary framework by AxlFlo LLC.",
     "source_files": [
       "C:\\Users\\amitk\\Downloads\\Test 5.2.2026\\SHIFT_to_Scale_Deck_Outline_v2.md",
       "C:\\Users\\amitk\\Downloads\\Test 5.2.2026\\SHIFT_to_Scale_VEDA_Proof_Content.md"
@@ -17,7 +17,7 @@
   "slides": [
     {
       "type": "cover",
-      "title": "SHIFT to Scale™",
+      "title": "SHIFT to SCALE™",
       "subtitle": "Stop Funding Prompt Theatre. Start Building Enterprise Capability.",
       "tagline": "AI adoption starts with a SHIFT. ROI only appears when the system can survive the operator.",
       "byline": "Amit Kaistha · amit.kaistha@axlflo.ai",
@@ -85,7 +85,7 @@
     {
       "type": "table",
       "section": "THE FRAMEWORK",
-      "title": "SHIFT to Scale™ - Five Pillars. One Enterprise System.",
+      "title": "SHIFT to SCALE™ - Five Pillars. One Enterprise System.",
       "intro": "SHIFT is not a training programme. It is a change architecture designed to move AI from individual heroics to governed enterprise capability.",
       "columns": ["Letter", "Pillar", "What It Does", "What Breaks Without It"],
       "rows": [
@@ -102,7 +102,7 @@
       "section": "THE PROOF LAYER",
       "title": "VEDA Shows the Difference Between an AI Demo and an AI System.",
       "body": [
-        "The SHIFT to Scale argument is the why. VEDA is the proof of what happens when the principles are applied to a real build.",
+        "The SHIFT to SCALE argument is the why. VEDA is the proof of what happens when the principles are applied to a real build.",
         "It was built from scratch, versioned, tested, and governed using the same principles the framework teaches.",
         "The story is not that we built a stock screener. The story is that we built an AI system that does not depend on the person running it."
       ],
@@ -157,7 +157,7 @@
     {
       "type": "mapping",
       "section": "THE CONNECTION",
-      "title": "VEDA Is SHIFT to Scale. Not Described. Built.",
+      "title": "VEDA Is SHIFT to SCALE. Not Described. Built.",
       "intro": "VEDA solved a real problem: consistent, trustworthy AI output for equity research. Every design choice maps directly to a SHIFT pillar.",
       "rows": [
         ["S - Strategise", "Clear mandate: swing trading, 20-50% target, 20-day holding window. No scope creep."],
@@ -166,7 +166,7 @@
         ["F - Fluency by Role", "SWING_QUICKREF.md gives the right depth for daily execution."],
         ["T - Track & Prove", "Regression tests are named after real incidents. The system proves it does not repeat mistakes."]
       ],
-      "closing": "What VEDA proves at the individual level, SHIFT to Scale deploys at enterprise scale."
+      "closing": "What VEDA proves at the individual level, SHIFT to SCALE deploys at enterprise scale."
     },
     {
       "type": "cards",
@@ -268,7 +268,7 @@
       "type": "disclaimer",
       "title": "Disclaimer",
       "body": [
-        "SHIFT to Scale™ is a proprietary framework developed by AxlFlo LLC. All methodologies, processes, playbooks, and training content described in this document are the intellectual property of AxlFlo and may not be reproduced, distributed, or repurposed without written consent.",
+        "SHIFT to SCALE™ is a proprietary framework developed by AxlFlo LLC. All methodologies, processes, playbooks, and training content described in this document are the intellectual property of AxlFlo and may not be reproduced, distributed, or repurposed without written consent.",
         "This document is for informational and proposal purposes only. Examples, programme structures, timelines, and outcomes are illustrative and do not guarantee future results.",
         "VEDA is referenced as a proof-of-concept build demonstrating transferable AI system design principles. It is not investment advice, a public product offer, or a recommendation to buy or sell securities.",
         "The AxlFlo deck engine is referenced as an internal case study in applying software engineering principles to agentic engineering workflows.",

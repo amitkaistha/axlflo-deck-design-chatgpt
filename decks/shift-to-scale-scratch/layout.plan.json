@@ -1,0 +1,148 @@
+{
+  "principles": [
+    "Fresh build from the supplied script, not a patch of the previous generated deck.",
+    "Use the slide catalogue as a renderer vocabulary, not the creative ceiling.",
+    "Apply Amit style: short declarative sentences, sharp contrast, concrete operating stakes, and minimal em dash dependence.",
+    "Keep the Messi metaphor as a bookend: hook, outcome, and closing tagline only.",
+    "Use VEDA as proof of system design discipline, not as a technical detour.",
+    "Preserve visual variety by alternating narrative, proof, architecture, framework, roadmap, and CTA moments."
+  ],
+  "visual_diversity": {
+    "max_consecutive_same_render": 1,
+    "note": "Consecutive dark card families are allowed only where the narrative explicitly moves from problem to principle."
+  },
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "title",
+      "visual_variant": "cinematic_cover",
+      "creative_intent": "Premium CXO opening that frames AI adoption as a system problem.",
+      "density": "low",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "strong title block and logo field"
+    },
+    {
+      "slide": 2,
+      "render_as": "storyCards",
+      "visual_variant": "thesis_triptych",
+      "creative_intent": "Use the Messi metaphor once as a key-person-risk hook.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "quote plus star-vs-system contrast cards"
+    },
+    {
+      "slide": 3,
+      "render_as": "insightColumns",
+      "visual_variant": "thesis_triptych",
+      "creative_intent": "Make prompt-first deployment failure feel like operating risk.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three failure cards",
+      "allow_visual_repeat": true,
+      "visual_repeat_reason": "Slides 2 and 3 form a hook-to-problem pair but differ in card count and narrative job."
+    },
+    {
+      "slide": 4,
+      "render_as": "flowRisk",
+      "visual_variant": "evidence_dashboard",
+      "creative_intent": "Show AI as an amplifier that moves mess from input to operating consequence.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": true,
+      "visual_anchor": "risk flow from messy input to scaled consequence"
+    },
+    {
+      "slide": 5,
+      "render_as": "stack",
+      "visual_variant": "layered_operating_system",
+      "creative_intent": "Reframe enterprise AI from another dashboard to a governed operating layer.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "layered system stack: context, logic, QA, execution"
+    },
+    {
+      "slide": 6,
+      "render_as": "frameworkRows",
+      "visual_variant": "framework_map",
+      "creative_intent": "Introduce SHIFT as a failure-mode-aware executive framework.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "five framework rows"
+    },
+    {
+      "slide": 7,
+      "render_as": "sectionDivider",
+      "visual_variant": "credentials_proof",
+      "creative_intent": "Shift from argument to proof without adding visual clutter.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "large proof statement"
+    },
+    {
+      "slide": 8,
+      "render_as": "processCycle",
+      "visual_variant": "meta_engine_process",
+      "creative_intent": "Show VEDA as an engineered build process with five design decisions.",
+      "density": "high",
+      "background": "dark",
+      "number_led": true,
+      "visual_anchor": "five numbered build principles"
+    },
+    {
+      "slide": 9,
+      "render_as": "systemArchitecture",
+      "visual_variant": "architecture_board",
+      "creative_intent": "Make VEDA look like a governed operating architecture, not a list of files.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "versioned vs live file zones"
+    },
+    {
+      "slide": 10,
+      "render_as": "storyCards",
+      "visual_variant": "outcome_ladder",
+      "creative_intent": "Return to the Messi metaphor as the payoff: raise the floor, not just the ceiling.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three outcome cards"
+    },
+    {
+      "slide": 11,
+      "render_as": "roadmapPhases",
+      "visual_variant": "sprint_roadmap",
+      "creative_intent": "Make the 12-month path concrete, sequenced, and executive-legible.",
+      "density": "medium",
+      "background": "white",
+      "number_led": true,
+      "visual_anchor": "four implementation phases"
+    },
+    {
+      "slide": 12,
+      "render_as": "ctaClosing",
+      "visual_variant": "commercial_cta_packages",
+      "creative_intent": "Close commercially while preserving the system argument and Messi tagline.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three engagement offers"
+    },
+    {
+      "slide": 13,
+      "render_as": "disclaimer",
+      "visual_variant": "disclaimer_appendix",
+      "creative_intent": "Place legal and proof-of-concept notes outside the selling narrative.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "clean legal text block"
+    }
+  ]
+}

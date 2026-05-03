@@ -103,6 +103,22 @@ A strong deck should vary:
 - roadmap/sequence slide
 - CTA slide
 
+## Brain-Led Concept Slides
+
+The slide catalogue is a renderer vocabulary, not the creative ceiling.
+
+When the core idea needs a stronger visual metaphor, create a custom concept slide instead of forcing the content into cards, tables, or rows. This is especially important for thesis slides, proof-of-system slides, before/after mental-model shifts, and moments where the audience must understand the operating logic in one glance.
+
+Good custom concept slides should:
+
+1. Make the argument clearer than a standard catalogue layout would.
+2. Use one dominant visual idea.
+3. Preserve AxlFlo brand anatomy, contrast, typography, and footer discipline.
+4. Stay inspectable and editable in PowerPoint.
+5. Pass structural QA before being treated as reusable inspiration.
+
+The agent is not the magic. The system around the agent is the product.
+
 ## QA Philosophy
 
 QA should catch:

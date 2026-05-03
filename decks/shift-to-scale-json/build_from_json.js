@@ -30,13 +30,17 @@ const {
 const E = require("../../lib/engine");
 
 const repoRoot = path.resolve(__dirname, "../..");
-const contentPath = path.join(__dirname, "content.json");
-const legacyInputPath = path.join(__dirname, "slides.json");
+const deckDir = process.env.AXLFLO_DECK_DIR
+  ? path.resolve(repoRoot, process.env.AXLFLO_DECK_DIR)
+  : __dirname;
+const outputBase = process.env.AXLFLO_OUTPUT_BASENAME || "shift_to_scale_from_fresh_json";
+const contentPath = path.join(deckDir, "content.json");
+const legacyInputPath = path.join(deckDir, "slides.json");
 const inputPath = fs.existsSync(contentPath) ? contentPath : legacyInputPath;
-const layoutPlanPath = path.join(__dirname, "layout.plan.json");
+const layoutPlanPath = path.join(deckDir, "layout.plan.json");
 const outDir = path.join(repoRoot, "output");
-const outputPath = path.join(outDir, "shift_to_scale_from_fresh_json.pptx");
-const manifestPath = path.join(outDir, "shift_to_scale_from_fresh_json_manifest.json");
+const outputPath = path.join(outDir, `${outputBase}.pptx`);
+const manifestPath = path.join(outDir, `${outputBase}_manifest.json`);
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
@@ -51,14 +55,14 @@ const slides = (deckJson.slides || []).map((slide, idx) => ({
 }));
 const C = E.C;
 const STRIP = 0.04;
-const LEGAL_FOOTER = deckJson.deck?.footer || "SHIFT to Scale™ is a proprietary framework by AxlFlo LLC.";
+const LEGAL_FOOTER = deckJson.deck?.footer || "SHIFT to SCALE™ is a proprietary framework by AxlFlo LLC.";
 let ICONS = {};
 
 const pptx = new pptxgen();
 pptx.author = `${deckJson.deck?.author || "AxlFlo"} · ${deckJson.deck?.email || ""}`;
 pptx.company = "AxlFlo LLC";
-pptx.subject = deckJson.deck?.subtitle || deckJson.deck?.title || "SHIFT to Scale";
-pptx.title = deckJson.deck?.title || "SHIFT to Scale";
+pptx.subject = deckJson.deck?.subtitle || deckJson.deck?.title || "SHIFT to SCALE";
+pptx.title = deckJson.deck?.title || "SHIFT to SCALE";
 pptx.lang = "en-US";
 pptx.theme = { headFontFace: "Segoe UI", bodyFontFace: "Segoe UI", lang: "en-US" };
 pptx.defineLayout({ name: "AXLFLO", width: 10, height: 5.625 });
@@ -499,6 +503,204 @@ function renderConceptMap(s, i, gb) {
   addFooter(sl, i, false, s.closing);
 }
 
+function renderNumberLed(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 25);
+  addText(sl, s.number || "12-18", 0.55, 1.42, 2.85, 0.88, {
+    fontSize: 47,
+    bold: true,
+    color: C.mustardGold,
+    align: "center"
+  });
+  addText(sl, s.unit || "months", 0.85, 2.28, 2.25, 0.24, {
+    fontSize: 15,
+    bold: true,
+    color: C.white,
+    align: "center"
+  });
+  sl.addShape(pptx.ShapeType.rect, { x: 3.68, y: 1.42, w: 0.04, h: 2.58, fill: { color: C.purple } });
+  addText(sl, s.intro || "", 4.05, 1.42, 5.25, 0.58, { fontSize: 12, color: C.white, valign: "top" });
+  (s.cards || []).forEach((c, idx) => {
+    sl.addShape(pptx.ShapeType.rect, {
+      x: 4.08,
+      y: 2.18 + idx * 0.60,
+      w: 5.05,
+      h: 0.43,
+      fill: { color: C.cardNavy },
+      line: { color: C.cardBorder, width: 0.45 }
+    });
+    sl.addShape(pptx.ShapeType.rect, { x: 4.08, y: 2.18 + idx * 0.60, w: STRIP, h: 0.43, fill: { color: E.SEQ[3][idx] } });
+    addText(sl, c.title, 4.26, 2.28 + idx * 0.60, 1.10, 0.12, { fontSize: 8.3, bold: true, color: C.white });
+    addText(sl, c.body, 5.48, 2.27 + idx * 0.60, 3.42, 0.14, { fontSize: 7.4, color: C.coolGrey });
+  });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderSpectrum(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 25);
+  addText(sl, s.intro || "", 0.45, 1.23, 8.9, 0.48, { fontSize: 11.2, color: C.white });
+  sl.addShape(pptx.ShapeType.line, { x: 0.82, y: 2.62, w: 8.3, h: 0, line: { color: C.coolGrey, width: 1.2 } });
+  (s.cards || []).forEach((c, idx) => {
+    const x = 0.75 + idx * 2.75;
+    sl.addShape(pptx.ShapeType.ellipse, {
+      x: x + 0.62,
+      y: 2.37,
+      w: 0.50,
+      h: 0.50,
+      fill: { color: E.SEQ[3][idx] },
+      line: { color: E.SEQ[3][idx], width: 0.5 }
+    });
+    addText(sl, String(idx + 1), x + 0.62, 2.52, 0.50, 0.12, { fontSize: 8, bold: true, color: C.white, align: "center" });
+    addText(sl, c.title, x, 3.02, 1.75, 0.30, { fontSize: 11.2, bold: true, color: C.white, align: "center" });
+    addText(sl, c.body, x - 0.10, 3.45, 1.95, 0.48, { fontSize: 7.7, color: C.coolGrey, align: "center" });
+  });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderCurve(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 25);
+  addText(sl, s.intro || "", 0.45, 1.20, 9.0, 0.48, { fontSize: 11.2, color: C.white });
+  const chart = { x: 0.70, y: 1.95, w: 5.15, h: 1.85 };
+  sl.addShape(pptx.ShapeType.rect, { x: chart.x, y: chart.y, w: chart.w, h: chart.h, fill: { color: C.cardNavy }, line: { color: C.cardBorder, width: 0.5 } });
+  const bars = [0.46, 0.88, 0.66, 1.12, 0.92];
+  bars.forEach((height, idx) => {
+    const x = chart.x + 0.55 + idx * 0.82;
+    const y = chart.y + 1.55 - height;
+    sl.addShape(pptx.ShapeType.rect, {
+      x,
+      y,
+      w: 0.42,
+      h: height,
+      fill: { color: E.SEQ[5][idx] },
+      line: { color: E.SEQ[5][idx], width: 0.5 }
+    });
+    addText(sl, idx % 2 ? "up" : "dip", x - 0.05, chart.y + 1.62, 0.52, 0.12, {
+      fontSize: 5.8,
+      color: C.coolGrey,
+      align: "center"
+    });
+  });
+  addText(sl, "Not a takeover curve", chart.x + 0.30, chart.y + 0.18, 4.45, 0.22, { fontSize: 13, bold: true, color: C.white, align: "center" });
+  (s.cards || []).forEach((c, idx) => addCard(sl, 6.18, 1.82 + idx * 0.78, 3.05, 0.74, E.SEQ[3][idx], c.title, c.body, {
+    titleSize: 8.7,
+    bodySize: 6.7,
+    titleH: 0.18
+  }));
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderFlowRisk(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 24);
+  addText(sl, s.intro || "", 0.45, 1.20, 9.05, 0.45, { fontSize: 11, color: C.white });
+  const nodes = s.cards || [];
+  nodes.forEach((c, idx) => {
+    const x = 0.70 + idx * 3.02;
+    addCard(sl, x, 2.05, 2.45, 1.20, E.SEQ[3][idx], c.title, c.body, {
+      titleSize: 10.3,
+      bodySize: 7.3,
+      iconSize: 0.16
+    });
+    if (idx < nodes.length - 1) {
+      addText(sl, ">", x + 2.57, 2.52, 0.30, 0.22, { fontSize: 18, bold: true, color: E.SEQ[3][idx + 1], align: "center" });
+    }
+  });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderCourtroom(s, i, gb) {
+  const sl = pptx.addSlide();
+  whiteBase(sl, gb, s.section, s.title);
+  addText(sl, s.intro || "", 0.42, 1.22, 9.1, 0.35, { fontSize: 10.3, color: C.inkNavy });
+  addText(sl, "EVIDENCE", 0.60, 1.80, 2.25, 0.20, { fontSize: 9, bold: true, color: C.indigoBlue, align: "center" });
+  addText(sl, "BUSINESS JUDGMENT", 3.85, 1.80, 2.25, 0.20, { fontSize: 9, bold: true, color: C.purple, align: "center" });
+  addText(sl, "VERDICT", 7.03, 1.80, 2.0, 0.20, { fontSize: 9, bold: true, color: C.fieryCoral, align: "center" });
+  (s.cards || []).forEach((c, idx) => {
+    const x = [0.55, 3.57, 6.60][idx];
+    const w = [2.55, 2.82, 2.55][idx];
+    sl.addShape(pptx.ShapeType.rect, { x, y: 2.16, w, h: 1.42, fill: { color: idx === 1 ? "FFF9EC" : C.cardWhite }, line: { color: idx === 1 ? "E0D6B8" : C.borderLight, width: 0.5 }, shadow: E.shadow() });
+    sl.addShape(pptx.ShapeType.rect, { x, y: 2.16, w: STRIP, h: 1.42, fill: { color: E.SEQ[3][idx] } });
+    addText(sl, c.title, x + 0.18, 2.38, w - 0.36, 0.25, { fontSize: 11, bold: true, color: C.inkNavy, align: "center" });
+    addText(sl, c.body, x + 0.22, 2.82, w - 0.44, 0.46, { fontSize: 7.6, color: "333333", align: "center" });
+  });
+  addCreamBox(sl, `"${s.quote}"`, 4.44, 0.46, 10.3);
+  addFooter(sl, i, false, s.closing);
+}
+
+function renderStack(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 25);
+  addText(sl, s.intro || "", 0.45, 1.20, 4.7, 0.72, { fontSize: 11.2, color: C.white });
+  (s.cards || []).forEach((c, idx) => {
+    const y = 1.72 + idx * 0.54;
+    sl.addShape(pptx.ShapeType.rect, {
+      x: 5.72 - idx * 0.20,
+      y,
+      w: 3.55 + idx * 0.20,
+      h: 0.43,
+      fill: { color: C.cardNavy },
+      line: { color: C.cardBorder, width: 0.5 }
+    });
+    sl.addShape(pptx.ShapeType.rect, { x: 5.72 - idx * 0.20, y, w: STRIP, h: 0.43, fill: { color: E.SEQ[5][idx] } });
+    addText(sl, c.title, 5.90 - idx * 0.20, y + 0.12, 1.42, 0.12, { fontSize: 8.3, bold: true, color: C.white });
+    addText(sl, c.body, 7.35 - idx * 0.20, y + 0.11, 1.62 + idx * 0.20, 0.14, { fontSize: 6.8, color: C.coolGrey });
+  });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderTruthGap(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 25);
+  addText(sl, s.intro || "", 0.45, 1.18, 9.0, 0.40, { fontSize: 11, color: C.white });
+  const labels = ["LOOKS RIGHT", "IS RIGHT"];
+  const colors = [C.purple, C.fieryCoral];
+  labels.forEach((label, idx) => {
+    const x = 0.65 + idx * 4.55;
+    sl.addShape(pptx.ShapeType.rect, { x, y: 1.92, w: 3.75, h: 1.55, fill: { color: C.cardNavy }, line: { color: colors[idx], width: 1.1 }, shadow: E.shadow() });
+    addText(sl, label, x + 0.20, 2.14, 3.35, 0.22, { fontSize: 13, bold: true, color: colors[idx], align: "center" });
+    const item = (s.cards || [])[idx] || {};
+    addText(sl, item.body || "", x + 0.35, 2.62, 3.05, 0.42, { fontSize: 9.5, color: C.white, align: "center" });
+  });
+  addText(sl, "!=", 4.63, 2.46, 0.65, 0.38, { fontSize: 24, bold: true, color: C.mustardGold, align: "center" });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
+function renderFlywheel(s, i, gb) {
+  const sl = pptx.addSlide();
+  darkBase(sl, gb);
+  addTitle(sl, s.section, s.title, 24);
+  addText(sl, s.intro || "", 0.45, 1.18, 9.0, 0.42, { fontSize: 11, color: C.white });
+  const positions = [
+    [1.25, 2.12],
+    [3.85, 1.72],
+    [6.45, 2.12],
+    [3.85, 3.05]
+  ];
+  (s.cards || []).forEach((c, idx) => {
+    const [x, y] = positions[idx] || positions[0];
+    sl.addShape(pptx.ShapeType.ellipse, { x, y, w: 1.72, h: 0.72, fill: { color: C.cardNavy }, line: { color: E.SEQ[4][idx], width: 1.0 }, shadow: E.shadow() });
+    addText(sl, c.title, x + 0.16, y + 0.18, 1.40, 0.15, { fontSize: 8.6, bold: true, color: C.white, align: "center" });
+    addText(sl, c.body, x + 0.18, y + 0.40, 1.36, 0.12, { fontSize: 5.9, color: C.coolGrey, align: "center" });
+  });
+  addText(sl, "AI HYPE\nLOOP", 4.18, 2.42, 1.08, 0.42, { fontSize: 12, bold: true, color: C.mustardGold, align: "center" });
+  addCreamBox(sl, `"${s.quote}"`, 4.38, 0.42, 10.4);
+  addFooter(sl, i, true, s.closing);
+}
+
 function renderRoadmap(s, i, gb) {
   const sl = pptx.addSlide();
   whiteBase(sl, gb, s.section, s.title);
@@ -552,6 +754,14 @@ function renderSlide(s, i, gb) {
     case "processCycle": return renderCards(s, i, gb);
     case "systemArchitecture": return renderArchitecture(s, i, gb);
     case "conceptMap": return renderConceptMap(s, i, gb);
+    case "numberLed": return renderNumberLed(s, i, gb);
+    case "spectrum": return renderSpectrum(s, i, gb);
+    case "curve": return renderCurve(s, i, gb);
+    case "flowRisk": return renderFlowRisk(s, i, gb);
+    case "courtroom": return renderCourtroom(s, i, gb);
+    case "stack": return renderStack(s, i, gb);
+    case "truthGap": return renderTruthGap(s, i, gb);
+    case "flywheel": return renderFlywheel(s, i, gb);
     case "roadmapPhases": return renderRoadmap(s, i, gb);
     case "numberProofCards": return renderCards(s, i, gb);
     case "ctaClosing": return renderCTA(s, i, gb);
@@ -564,6 +774,14 @@ function renderSlide(s, i, gb) {
     case "architecture": return renderArchitecture(s, i, gb);
     case "mapping": return renderMapping(s, i, gb);
     case "conceptMap": return renderConceptMap(s, i, gb);
+    case "numberLed": return renderNumberLed(s, i, gb);
+    case "spectrum": return renderSpectrum(s, i, gb);
+    case "curve": return renderCurve(s, i, gb);
+    case "flowRisk": return renderFlowRisk(s, i, gb);
+    case "courtroom": return renderCourtroom(s, i, gb);
+    case "stack": return renderStack(s, i, gb);
+    case "truthGap": return renderTruthGap(s, i, gb);
+    case "flywheel": return renderFlywheel(s, i, gb);
     case "roadmap": return renderRoadmap(s, i, gb);
     case "cta": return renderCTA(s, i, gb);
     case "disclaimer": return renderDisclaimer(s, i, gb);
@@ -593,8 +811,11 @@ async function main() {
       gradientBar: true,
       number_led: Boolean(s.layout_plan?.number_led),
       density: s.layout_plan?.density || "medium",
-      visual_anchor: s.layout_plan?.visual_anchor || null
+      visual_anchor: s.layout_plan?.visual_anchor || null,
+      allow_visual_repeat: Boolean(s.layout_plan?.allow_visual_repeat),
+      visual_repeat_reason: s.layout_plan?.visual_repeat_reason || null
     })),
+    visual_diversity: layoutPlan.visual_diversity || null,
     slide_types: slides.map((s, idx) => ({ slide: idx + 1, type: s.type, render_as: s.layout_plan?.render_as || s.type, title: s.title }))
   }, null, 2));
   console.log(`Built ${outputPath}`);

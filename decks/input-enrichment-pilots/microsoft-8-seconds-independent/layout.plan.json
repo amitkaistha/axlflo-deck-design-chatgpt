@@ -1,0 +1,34 @@
+{
+  "visual_diversity": {
+    "max_consecutive_same_render": 1,
+    "requires_explicit_repeat_approval": true,
+    "rule": "Do not allow 2+ consecutive slides with the same visual pattern unless intentionally approved in layout.plan.json."
+  },
+  "principles": [
+    "Build an independent executive narrative before AxlFlo positioning appears.",
+    "Use 15 core slides outside the starter and appendix: 12 narrative slides plus 3 AxlFlo / SHIFT to SCALE bridge slides.",
+    "Use approved premium visual variants from VISUAL_VARIANT_CATALOGUE.md before experimental renderers.",
+    "Keep the Microsoft edit claim proof-gated as source-alleged.",
+    "Do not mention the input format in slide-facing copy.",
+    "Make the final bridge commercially direct without weakening the independent narrative."
+  ],
+  "slides": [
+    { "slide": 1, "render_as": "title", "visual_variant": "cinematic_cover", "creative_intent": "Starter slide with strong executive provocation.", "density": "low", "background": "dark", "number_led": false, "visual_anchor": "premium title block and closing line" },
+    { "slide": 2, "render_as": "storyCards", "visual_variant": "thesis_triptych", "creative_intent": "Core 1: Open with the 8-second hook and verification caution.", "density": "medium", "background": "dark", "number_led": true, "visual_anchor": "narrative hook plus two proof-status cards" },
+    { "slide": 3, "render_as": "numberProofCards", "visual_variant": "evidence_dashboard", "creative_intent": "Core 2: Make the 12-18 month claim feel enormous and testable.", "density": "medium", "background": "dark", "number_led": true, "visual_anchor": "three proof numbers / claim dimensions" },
+    { "slide": 4, "render_as": "insightColumns", "visual_variant": "outcome_ladder", "creative_intent": "Core 3: Show leadership disagreement as a strategy caution.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "narrative body plus three interpretation cards" },
+    { "slide": 5, "render_as": "storyCards", "visual_variant": "thesis_triptych", "creative_intent": "Core 4: Challenge the progress curve without dismissing AI.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three progress reality checks" },
+    { "slide": 6, "render_as": "sectionDivider", "visual_variant": "cinematic_cover", "creative_intent": "Core 5: Deliver the strongest system thesis.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "large system statement" },
+    { "slide": 7, "render_as": "processCycle", "visual_variant": "meta_engine_process", "creative_intent": "Core 6: Show that useful agents are governed systems.", "density": "high", "background": "dark", "number_led": true, "visual_anchor": "five numbered system controls" },
+    { "slide": 8, "render_as": "systemArchitecture", "visual_variant": "architecture_board", "creative_intent": "Core 7: Show why code has verification and business work needs governance.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "versioned evidence vs live judgment zones" },
+    { "slide": 9, "render_as": "insightGrid", "visual_variant": "outcome_ladder", "creative_intent": "Core 8: Make ownership the center of the replacement debate.", "density": "high", "background": "dark", "number_led": false, "visual_anchor": "five ownership cards" },
+    { "slide": 10, "render_as": "storyCards", "visual_variant": "thesis_triptych", "creative_intent": "Core 9: Make trust the real bottleneck.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "looks right / not right / must be proven cards" },
+    { "slide": 11, "render_as": "processCycle", "visual_variant": "meta_engine_process", "creative_intent": "Core 10: Show CapEx, narrative, urgency, and buying as an incentive loop.", "density": "high", "background": "dark", "number_led": true, "visual_anchor": "five-step market pressure cycle" },
+    { "slide": 12, "render_as": "frameworkRows", "visual_variant": "framework_map", "creative_intent": "Core 11: Convert the Automation Audit into a decision table.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "four audit gates" },
+    { "slide": 13, "render_as": "conceptMap", "visual_variant": "translation_matrix", "creative_intent": "Core 12: Turn the source examples into an automate/augment/protect matrix.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "decision matrix" },
+    { "slide": 14, "render_as": "sectionDivider", "visual_variant": "cinematic_cover", "creative_intent": "Bridge 1: Move from diagnosis to AxlFlo operating answer.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "AxlFlo bridge statement" },
+    { "slide": 15, "render_as": "frameworkRows", "visual_variant": "framework_map", "creative_intent": "Bridge 2: Map SHIFT to SCALE into the operating need.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "SHIFT pillar table" },
+    { "slide": 16, "render_as": "ctaClosing", "visual_variant": "commercial_cta_packages", "creative_intent": "Bridge 3: Direct AxlFlo sales motion.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three engagement offers" },
+    { "slide": 17, "render_as": "disclaimer", "visual_variant": "disclaimer_appendix", "creative_intent": "Appendix with verification and usage notes.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "source note block" }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "deck": {
+    "id": "shift-to-scale-scratch-v1",
+    "title": "SHIFT to SCALE™",
+    "subtitle": "From Prompt to System. From Individual to Enterprise.",
+    "version": "scratch-v1",
+    "brand": "AxlFlo",
+    "author": "Amit Kaistha",
+    "email": "amit.kaistha@axlflo.ai",
+    "footer": "SHIFT to SCALE™ is a proprietary framework by AxlFlo LLC.",
+    "source_files": [
+      "C:\\Users\\amitk\\Downloads\\Test 5.2.2026\\SHIFT_to_Scale_Deck_Outline_v2.md",
+      "C:\\Users\\amitk\\Downloads\\Test 5.2.2026\\SHIFT_to_Scale_VEDA_Proof_Content.md"
+    ],
+    "intent": "Fresh CXO deck from the source script, rewritten in Amit style: sharp contrast, period-break cadence, system language, and no generic AI-adoption filler."
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "title": "SHIFT to SCALE™",
+      "subtitle": "From Prompt to System. From Individual to Enterprise.",
+      "tagline": "AI adoption starts with a SHIFT. ROI requires a system that survives the operator.",
+      "byline": "Amit Kaistha · Founder, AxlFlo · amit.kaistha@axlflo.ai",
+      "closing": "Every player. Messi-level. That's the system."
+    },
+    {
+      "type": "hook",
+      "section": "THE REAL QUESTION",
+      "title": "Every Team Has a Messi. Not Every Team Wins.",
+      "body": [
+        "Your best AI user is already saving 3-4 hours a week. They know the prompts. They know the shortcuts. They know the workflow changes nobody else has mastered.",
+        "That looks like adoption. It is dependency. When performance depends on one exceptional individual, the enterprise has not built capability. It has created key-person risk.",
+        "Great teams are not built around one player's genius. They are built around a system that raises every player's floor."
+      ],
+      "quote": "Messi did not make Barcelona great. Barcelona's system made Messi unstoppable - and turned the players around him into champions.",
+      "cards": [
+        { "title": "Star-led adoption", "body": "Personal fluency, hidden context, uneven transfer." },
+        { "title": "System-led capability", "body": "Shared logic, governed execution, repeatable performance." }
+      ],
+      "closing": "The dependency is the risk. The system is the asset."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE PROBLEM",
+      "title": "Most AI Deployments Create Stars. Not Systems.",
+      "intro": "Without structure, AI performance becomes uneven by design. Power users accelerate. Everyone else negotiates with noise.",
+      "cards": [
+        { "title": "The Prompt Dependency", "body": "Output quality is determined by who is asking. The expert gets useful work. Everyone else gets noise." },
+        { "title": "Context Lives in the Conversation", "body": "Rules sit in someone's head. Every session starts from scratch. There is no institutional memory." },
+        { "title": "Drift Is Invisible", "body": "Rules accumulate informally. Outputs become inconsistent. Nobody knows what changed until the cost shows up." }
+      ],
+      "closing": "This is not a technology problem. It is an operating-design problem. And it compounds."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE CORE TRUTH",
+      "title": "AI Does Not Fix the Mess. It Scales It.",
+      "intro": "AI is not a clean-up crew. It is an amplifier. Put it on a strong system and the system gets faster. Put it on a messy system and the mess gets industrialised.",
+      "cards": [
+        { "title": "Messy input", "body": "Unwritten rules. Missing context. Different users explaining the same work differently." },
+        { "title": "AI acceleration", "body": "More output. More variation. More confidence in work nobody can consistently reproduce." },
+        { "title": "Scaled consequence", "body": "The gap becomes operational. Quality becomes personal. Governance arrives after the damage." }
+      ],
+      "quote": "AI does not decide what your operating model is. It reveals it.",
+      "closing": "The question is not whether your people are using AI. It is what AI is amplifying."
+    },
+    {
+      "type": "insight",
+      "section": "THE SHIFT IN THINKING",
+      "title": "The Next AI Platform Is Not Another Dashboard.",
+      "body": [
+        "Most organisations search for the right tool. The right licence. The right vendor. The right dashboard.",
+        "That is the wrong search.",
+        "The companies getting real results are not running better software. They are running better systems: structured context, documented logic, permissions, QA, and role-specific execution."
+      ],
+      "quote": "Most people using AI are prompting. Very few are engineering.",
+      "cards": [
+        { "title": "Structured context", "body": "What the AI must know before it acts." },
+        { "title": "Governed logic", "body": "What rules it must respect every time." },
+        { "title": "Quality gates", "body": "What proves the output can be trusted." },
+        { "title": "Role execution", "body": "How each user gets the right depth for the moment." }
+      ],
+      "closing": "The file is the operating layer. The AI is the engine. The system is what scales."
+    },
+    {
+      "type": "table",
+      "section": "THE FRAMEWORK",
+      "title": "SHIFT to SCALE™ - Five Pillars. One System.",
+      "intro": "SHIFT is not a training programme. It is the architecture for moving AI from individual performance to enterprise capability.",
+      "columns": ["Letter", "Pillar", "What It Does", "What Breaks Without It"],
+      "rows": [
+        ["S", "Strategise", "Define use cases by role before deploying AI. Align to business outcomes, not feature lists.", "Deployment becomes a solution looking for a problem."],
+        ["H", "Habits & Champions", "Build peer champions who model new behaviour inside real workflows.", "Knowledge stays with the power user."],
+        ["I", "Implement", "Deploy with governance, quality gates, output review, and rules about how rules change.", "AI produces volume, not value."],
+        ["F", "Fluency by Role", "Create role-specific prompt libraries, workflow templates, and execution cards.", "Generic AI training produces generic results."],
+        ["T", "Track & Prove", "Measure behaviour change, output quality, and ROI - not just licence activation.", "Adoption is claimed. ROI is not proven."]
+      ],
+      "closing": "SHIFT is the journey. Scale is the destination."
+    },
+    {
+      "type": "section",
+      "section": "SHIFT IN PRACTICE",
+      "title": "VEDA Shows What Building an AI System Actually Looks Like.",
+      "body": [
+        "The framework is the argument. VEDA is the proof.",
+        "It is an AI research system built from scratch with structured flat files, versioned logic, a rulebook, and a QA gate before major changes ship.",
+        "The story is not the stock screener. The story is the operating discipline. The system does not depend on the person running it."
+      ],
+      "closing": "That is the enterprise AI problem solved in miniature: repeatability without heroics."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE BUILD PRINCIPLES",
+      "title": "Engineering the Subjectivity Out",
+      "intro": "VEDA was designed so the rules live in the system, not in the operator's memory or a fragile prompt stack.",
+      "cards": [
+        { "title": "Separate the Concern", "body": "The logic lives in SWING_ENGINE.md. The conversation is for execution." },
+        { "title": "Version Everything", "body": "Every rule change has a version, rationale, and rollback path." },
+        { "title": "Govern Rule Change", "body": "VEDA_RULEBOOK.md defines what triggers patches, minor versions, and QA gates." },
+        { "title": "Build a QA Gate", "body": "Twenty scenario tests protect scoring, interactions, and regressions before major versions ship." },
+        { "title": "Separate Execution from Spec", "body": "SWING_QUICKREF.md is lightweight for daily use. SWING_ENGINE.md remains source of truth." }
+      ],
+      "closing": "A prompt is not a system. A prompt is a request."
+    },
+    {
+      "type": "architecture",
+      "section": "THE ARCHITECTURE",
+      "title": "A Flat File Is Not a Document. It Can Be an Operating System.",
+      "intro": "Every file has a role. Every role has a boundary. Live memory is separated from versioned system logic.",
+      "files": [
+        { "file": "SWING_ENGINE.md", "role": "Master scoring rules, formula, thresholds, and conditions.", "status": "Versioned" },
+        { "file": "SWING_VALIDATION.md", "role": "Edge cases, boundary conditions, and exception flags.", "status": "Versioned" },
+        { "file": "SWING_QUICKREF.md", "role": "Daily execution card, lightweight and session-efficient.", "status": "Versioned" },
+        { "file": "SECTOR_PULSE.md", "role": "Sector and macro context layer.", "status": "Versioned" },
+        { "file": "VEDA_RULEBOOK.md", "role": "Meta-governance: rules about how rules work.", "status": "Versioned" },
+        { "file": "VEDA_TEST_SUITE.md", "role": "20 scenario cards: the QA Gate.", "status": "Versioned" },
+        { "file": "SWING_LOG.md", "role": "Live session record, append only.", "status": "Live" },
+        { "file": "SWING_CHANGELOG.md", "role": "Version history: every change and reason.", "status": "Live" }
+      ],
+      "closing": "The expertise is not in the prompt. It is in the architecture the AI is forced to respect."
+    },
+    {
+      "type": "cards",
+      "theme": "dark",
+      "section": "THE OUTCOME",
+      "title": "The Goal Was Never One Messi. It Was a Team Where Everyone Plays Better.",
+      "intro": "When the expertise is in the architecture, quality stops being personal. A junior analyst and a senior director can work from the same system and hit the same standard.",
+      "cards": [
+        { "title": "Consistent output.", "body": "The best practice is in the file, not the person. Everyone executes from the same playbook." },
+        { "title": "Institutional memory.", "body": "Every refinement, corrected edge case, and lesson learned is documented and available from day one." },
+        { "title": "Faster onboarding.", "body": "New team members start from the system. Ramp time moves from quarters to days." }
+      ],
+      "closing": "You scale AI by making exceptional output ordinary."
+    },
+    {
+      "type": "roadmap",
+      "section": "THE PATH",
+      "title": "12 Months From Prompt to System",
+      "phases": [
+        { "timeframe": "Weeks 1-6", "title": "Diagnose & Design", "body": "Audit AI usage by role. Identify where output depends on individual expertise. Define 3-5 priority use cases and governance needs." },
+        { "timeframe": "Weeks 7-16", "title": "Architect & Activate", "body": "Build system structure, role-specific execution cards, champion network, rulebook, logic files, and baseline metrics." },
+        { "timeframe": "Weeks 17-32", "title": "Scale & Govern", "body": "Deploy across teams. Update onboarding. Run QA gates. Put version governance into live operation." },
+        { "timeframe": "Weeks 33-52", "title": "Prove & Extend", "body": "Document ROI. Log regressions. Extend to next-tier use cases. Shift from deployment to continuous improvement." }
+      ],
+      "quote": "Adoption is not a training event. It is a system design project with a beginning, a middle, and proof."
+    },
+    {
+      "type": "cta",
+      "title": "Let's Build Your AI System. Not Just Your AI Adoption.",
+      "body": "AxlFlo helps organisations move from AI experimentation to governed AI capability. We do not sell software. We build the system that makes the investment survive the pilot.",
+      "tagline": "Every player. Messi-level. That's the system.",
+      "engagements": [
+        { "title": "Discovery Session", "duration": "Free · 60 min", "body": "Map current AI usage, identify key-person risk, and show what a governed system looks like." },
+        { "title": "SHIFT Sprint", "duration": "8 weeks", "body": "Use cases defined. Execution cards built. Champions activated. Governance live." },
+        { "title": "Full Scale Programme", "duration": "12 months", "body": "System architecture, champions network, QA gate, version governance, and ROI reporting." }
+      ],
+      "contact": "Amit Kaistha · Founder, AxlFlo · amit.kaistha@axlflo.ai · axlflo.ai"
+    },
+    {
+      "type": "disclaimer",
+      "title": "Disclaimer",
+      "body": [
+        "SHIFT to SCALE™ is a proprietary framework developed by AxlFlo LLC. All methodologies, processes, playbooks, and training content described in this document are the intellectual property of AxlFlo and may not be reproduced, distributed, or repurposed without written consent.",
+        "This document is for informational and proposal purposes only. Examples, programme structures, timelines, and outcomes are illustrative and do not guarantee future results.",
+        "VEDA is referenced as a proof-of-concept build demonstrating transferable AI system design principles. It is not investment advice, a public product offer, or a recommendation to buy or sell securities.",
+        "Performance outcomes depend on organisational readiness, executive sponsorship, technology environment, operating model, and deployment scope."
+      ],
+      "engine_note": "Built from fresh source JSON using AxlFlo Deck System v5.9"
+    }
+  ]
+}

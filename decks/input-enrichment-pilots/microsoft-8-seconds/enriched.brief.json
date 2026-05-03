@@ -1,0 +1,329 @@
+{
+  "$schema": "../../../schema/axlflo.enriched-brief.schema.json",
+  "brief": {
+    "project_name": "The 8 Seconds Microsoft Tried to Delete From the Internet",
+    "version": "pilot-0.2-source-backed",
+    "created_for": "AxlFlo input enrichment pilot",
+    "objective": "Convert the PDF source into a structured argument before any slide JSON or PPTX generation begins.",
+    "audience": "CXO / senior technology leaders",
+    "delivery_context": "Email-readable executive narrative deck",
+    "desired_slide_count": "TBD; default 8-10 for a pilot mini-deck",
+    "tone": [
+      "provocative",
+      "evidence-led",
+      "executive",
+      "practical"
+    ],
+    "must_include": [
+      "The alleged 8-second Microsoft/Financial Times edit as the story hook",
+      "The distinction between useful LLMs and full job automation claims",
+      "The idea that systems, verification, and workflow design create the value around models",
+      "The ownership and trust problem: work is not only tasks",
+      "A practical automation decision lens for leaders"
+    ],
+    "must_avoid": [
+      "Turning the story into anti-AI commentary",
+      "Repeating inflammatory language from the source without executive reframing",
+      "Making legal or reputational accusations beyond what the PDF supports",
+      "Letting the Microsoft hook overpower the deeper AxlFlo-relevant lesson"
+    ]
+  },
+  "intake_answers": {
+    "audience": "Assumed CXO / senior technology leaders because the active deck system is CXO-oriented.",
+    "decision_stage": "Strategic education and narrative shaping, not product demo.",
+    "tone": "Provocative but disciplined; sharp enough to earn attention, grounded enough to be credible.",
+    "slide_count": "TBD; default 8-10 slides for a pilot deck unless Amit wants a tighter 5-slide version.",
+    "delivery_mode": "Assumed email-readable deck, so each slide must be self-explanatory.",
+    "primary_action": "Get leaders to stop panic-buying AI automation and start building governed, verifiable, engineered workflows.",
+    "proof_level": "Medium-high. The PDF gives a narrative source, but any claim about the original video edit should be treated as sourced-to-PDF unless independently verified.",
+    "constraints": "Do not convert the PDF directly into slides. First convert it into story, tension, shift, proof needs, visuals, CTA, and memorable line."
+  },
+  "recommended_intake_questions": [
+    {
+      "question": "Who is this for: CEO, CIO, CTO, board, transformation leader, or sales prospect?",
+      "why_it_matters": "It changes the language from technology critique to investment, governance, risk, or operating model.",
+      "default_assumption": "CXO / senior technology leader",
+      "blocks_build": false
+    },
+    {
+      "question": "Should the deck be provocative, balanced, or cautious?",
+      "why_it_matters": "The source is intentionally sharp; the deck can either preserve that edge or translate it into executive calm.",
+      "default_assumption": "Provocative but credible",
+      "blocks_build": false
+    },
+    {
+      "question": "How many slides should the pilot target?",
+      "why_it_matters": "This determines whether the Automation Audit becomes one slide, a sequence, or an appendix.",
+      "default_assumption": "8-10 slides",
+      "blocks_build": false
+    },
+    {
+      "question": "Is the goal thought leadership, sales enablement, internal alignment, or a board conversation?",
+      "why_it_matters": "It changes the CTA and the amount of AxlFlo positioning.",
+      "default_assumption": "Thought leadership with soft AxlFlo connection",
+      "blocks_build": false
+    },
+    {
+      "question": "Should we independently verify the deleted-video claim before using it as a hard factual claim?",
+      "why_it_matters": "The hook is powerful but sensitive; source-to-PDF is different from primary verification.",
+      "default_assumption": "Use as 'the source alleges' until verified",
+      "blocks_build": true
+    },
+    {
+      "question": "Should this connect directly to agentic engineering?",
+      "why_it_matters": "The PDF naturally supports that connection, but the deck can make it explicit or leave it implicit.",
+      "default_assumption": "Yes, explicitly connect it to agentic engineering",
+      "blocks_build": false
+    },
+    {
+      "question": "What should the reader do after the deck?",
+      "why_it_matters": "A CXO deck should end with a decision or behavior change, not only a clever argument.",
+      "default_assumption": "Run an automation audit on one critical workflow",
+      "blocks_build": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "source_001",
+      "type": "pdf",
+      "path_or_url": "c:\\Users\\amitk\\Downloads\\The 8 Seconds Microsoft Tried to Delete From the Internet — The AI OS.pdf",
+      "role": "primary source",
+      "priority": "high",
+      "status": "read_extracted_text",
+      "notes": "15-page PDF, approximately 14.6k extracted characters. Used as the source for the structured argument."
+    },
+    {
+      "id": "source_002",
+      "type": "url",
+      "path_or_url": "https://www.charafeddine.co/letters/the-8-seconds-microsoft-tried-to-delete-from-the-internet",
+      "role": "original web source reference",
+      "priority": "medium",
+      "status": "not_directly_read",
+      "notes": "URL fetch was not reliable in the previous pilot; the PDF is the source used for this enriched brief."
+    }
+  ],
+  "argument": {
+    "story": "The PDF uses an alleged 8-second removal from a Microsoft AI interview as a hook, then argues that broad claims about near-term full professional-task automation are commercially useful hype, not an operating plan. The deeper story is that AI value comes from engineered systems, verification loops, boundaries, and accountable human ownership.",
+    "tension": "Executives are being sold a replacement narrative, while the actual enterprise bottleneck is trust, verification, governance, and workflow design. The market rewards fear and urgency, but companies need disciplined automation choices.",
+    "shift": "Move from 'AI will replace knowledge work' to 'AI can compound well-designed work when bounded, verifiable, reversible, and worth repeating.'",
+    "stakes": "If leaders buy the hype, they waste budget, increase risk, and burden employees with supervising unreliable automation. If they engineer the system, they can target the right workflows, keep humans accountable, and create durable operating leverage.",
+    "proof_needed": [
+      {
+        "claim": "The source alleges that an 8-second segment was removed from an official interview video.",
+        "proof_type": "Primary verification: original video, current video, archived clip, transcript, or reliable third-party capture.",
+        "available_evidence": "The PDF states the allegation and describes the edited moment.",
+        "gap": "Need independent verification before treating this as a hard factual claim in an external deck."
+      },
+      {
+        "claim": "The PDF argues that full automation of most professional work within 12-18 months is unrealistic.",
+        "proof_type": "Comparative expert claims, model capability trends, examples of regressions, and domain-system requirements.",
+        "available_evidence": "The PDF cites disagreement among AI leaders, uneven model progress, the need for domain-specific harnesses, and the limits of unverifiable agent work.",
+        "gap": "For a public CXO deck, we should decide whether to cite the PDF only or add external corroborating sources."
+      },
+      {
+        "claim": "Coding agents work better because code has verification loops that many business workflows lack.",
+        "proof_type": "Engineering logic, testing/compile examples, workflow comparison.",
+        "available_evidence": "The PDF explains that code can be compiled and tested, while client politics, reputation, and strategy do not have simple compilers.",
+        "gap": "Could be strengthened with AxlFlo's own deck-engine case study as proof."
+      },
+      {
+        "claim": "The right automation decision depends on verifiability, boundedness, reversibility, and repetition.",
+        "proof_type": "Framework application across example workflows.",
+        "available_evidence": "The PDF provides the Automation Audit and examples for inbox sorting, strategic emails, and CSV cleaning.",
+        "gap": "Need Amit approval on whether to reuse, adapt, or rebrand the framework."
+      }
+    ],
+    "cta": {
+      "desired_action": "Run an automation audit before funding or scaling any AI workflow.",
+      "commercial_intent": "Soft thought-leadership bridge to AxlFlo's agentic engineering discipline.",
+      "offer_structure": "Optional: AxlFlo can help identify which workflows should be automated, augmented, or left human-owned.",
+      "contact": "TBD"
+    },
+    "memorable_line": "Do not automate the panic. Engineer the work."
+  },
+  "visual_opportunities": {
+    "number_slides": [
+      {
+        "idea": "8 seconds as the opening number",
+        "why_this_form": "A tiny duration creates a dramatic CXO hook and sets up the gap between spectacle and evidence.",
+        "possible_slide_role": "Opening provocation",
+        "must_preserve": [
+          "Treat the 8-second claim as source-backed but not independently verified."
+        ],
+        "avoid": [
+          "Making the slide feel like gossip or a takedown."
+        ]
+      },
+      {
+        "idea": "12-18 months as the claimed automation window",
+        "why_this_form": "The timeline makes the claim feel urgent, which lets the deck challenge whether urgency is evidence or sales pressure.",
+        "possible_slide_role": "Tension slide",
+        "must_preserve": [
+          "Frame as a claim from the source, not as AxlFlo's claim."
+        ],
+        "avoid": [
+          "Over-indexing on prediction drama."
+        ]
+      }
+    ],
+    "architecture_slides": [
+      {
+        "idea": "Model is engine, system is machine",
+        "why_this_form": "A system visual can show that prompts, rules, tests, approvals, logs, and feedback loops are what convert model output into enterprise-grade work.",
+        "possible_slide_role": "Agentic engineering bridge",
+        "must_preserve": [
+          "Make the visual CXO-readable, not developer-heavy."
+        ],
+        "avoid": [
+          "Too many technical components on one slide."
+        ]
+      },
+      {
+        "idea": "Automation decision gate",
+        "why_this_form": "A four-gate visual can turn the source framework into a leadership decision tool.",
+        "possible_slide_role": "Practical framework slide",
+        "must_preserve": [
+          "Verifiable",
+          "Bounded",
+          "Reversible",
+          "Repetitive"
+        ],
+        "avoid": [
+          "Generic maturity-model styling."
+        ]
+      }
+    ],
+    "contrast_slides": [
+      {
+        "idea": "Replacement narrative vs operating reality",
+        "why_this_form": "A two-column executive contrast can simplify the source argument without losing sharpness.",
+        "possible_slide_role": "Core argument slide",
+        "must_preserve": [
+          "Replacement talk is not the same as automation readiness."
+        ],
+        "avoid": [
+          "Anti-AI framing."
+        ]
+      },
+      {
+        "idea": "Tasks vs ownership",
+        "why_this_form": "This helps CXOs see that even when tasks move to AI, accountability moves upstream to humans.",
+        "possible_slide_role": "Trust and governance slide",
+        "must_preserve": [
+          "Work includes judgment, consequence, and accountability."
+        ],
+        "avoid": [
+          "Philosophical wording without business consequence."
+        ]
+      }
+    ],
+    "case_study_slides": [
+      {
+        "idea": "Our deck engine as the positive case study",
+        "why_this_form": "The same deck system we built demonstrates the source's central lesson: agentic output improves when surrounded by schema, QA, versioning, feedback, and human approval.",
+        "possible_slide_role": "Proof slide",
+        "must_preserve": [
+          "Connect to AxlFlo only after the source argument is established."
+        ],
+        "avoid": [
+          "Making the deck about us too early."
+        ]
+      }
+    ]
+  },
+  "content_inventory": {
+    "claims": [
+      "The PDF alleges Microsoft/FT removed an 8-second segment containing a major AI automation prediction.",
+      "The PDF argues that near-term full automation claims are exaggerated and financially incentivized.",
+      "The PDF distinguishes useful LLM adoption from broad professional-job replacement.",
+      "The PDF argues that coding agents work better because software work has strong verification loops.",
+      "The PDF frames work as ownership and accountability, not only task execution.",
+      "The PDF proposes a four-question Automation Audit."
+    ],
+    "proof_points": [
+      "The source contrasts different public AI-leader claims about job replacement timelines.",
+      "The source points to uneven model progress rather than explosive monthly capability growth.",
+      "The source argues that domain automation requires engineered harnesses around models.",
+      "The source uses coding agents as the strongest case because code can be tested.",
+      "The source shows that business workflows often fail the trust, reversibility, and verification tests."
+    ],
+    "frameworks": [
+      {
+        "name": "Automation Audit",
+        "source": "source_001",
+        "questions": [
+          "Is it verifiable?",
+          "Is it bounded?",
+          "Is it reversible?",
+          "Is it repetitive?"
+        ],
+        "recommended_cxo_translation": "Automate only where correctness is checkable, scope is controlled, mistakes are recoverable, and repetition creates ROI."
+      },
+      {
+        "name": "AxlFlo Agentic Engineering Bridge",
+        "source": "derived_from_source_plus_project_work",
+        "questions": [
+          "What is the model allowed to do?",
+          "How is output verified?",
+          "Where does human approval sit?",
+          "How does feedback become reusable system knowledge?"
+        ],
+        "recommended_cxo_translation": "Do not buy agents as labor replacement; build systems that make agent work governable."
+      }
+    ],
+    "must_keep_phrases": [
+      "Do not automate the panic. Engineer the work.",
+      "The model is not the operating model.",
+      "Trust is the real automation bottleneck."
+    ],
+    "sensitive_or_legal_notes": [
+      "Any claim that Microsoft or FT deleted content should be sourced carefully and preferably independently verified.",
+      "Avoid saying AI CEOs are lying in AxlFlo voice; translate to incentive-aware executive language.",
+      "Avoid naming individuals in a defamatory way; focus on claims, incentives, and decision discipline."
+    ]
+  },
+  "agent_assumptions": [
+    "The PDF is acceptable as the primary source for this pilot.",
+    "The output should be CXO-friendly, not a newsletter rewrite.",
+    "AxlFlo should use the source as a bridge to agentic engineering, not as a direct attack on Microsoft.",
+    "The deck can be provocative, but proof gates must control sensitive claims.",
+    "Amit wants this enrichment layer to ask questions and learn from feedback before slide JSON generation."
+  ],
+  "open_questions": [
+    {
+      "question": "Should I build this as a standalone pilot deck or only as an enriched brief example?",
+      "why_it_matters": "Standalone deck needs slide strategy, visual plan, and rendered PPTX; enriched brief only validates the new workflow layer.",
+      "default_assumption": "Standalone pilot mini-deck",
+      "blocks_build": false
+    },
+    {
+      "question": "Should the Microsoft/FT edit claim be independently verified before external use?",
+      "why_it_matters": "It is the strongest hook and also the most sensitive claim.",
+      "default_assumption": "Yes, verify before external CXO distribution; for internal pilot, label it as source-alleged.",
+      "blocks_build": true
+    },
+    {
+      "question": "Should the Automation Audit be reused as-is, adapted, or converted into an AxlFlo-branded decision model?",
+      "why_it_matters": "It affects attribution, originality, and how tightly the deck connects to AxlFlo.",
+      "default_assumption": "Adapt and attribute as source-inspired unless Amit wants a neutral summary.",
+      "blocks_build": false
+    },
+    {
+      "question": "How direct should the AxlFlo CTA be?",
+      "why_it_matters": "A thought-leadership deck can end with a behavioral recommendation; a sales deck should end with a next step.",
+      "default_assumption": "Soft CTA: run an automation audit on one critical workflow.",
+      "blocks_build": false
+    }
+  ],
+  "approval_gates": [
+    "Before deck generation, Amit should approve the default audience, tone, and slide count if they differ from CXO / provocative / 8-10.",
+    "Before external use, independently verify or soften the Microsoft/FT deleted-segment claim.",
+    "Before using the Automation Audit, decide whether to summarize, attribute, adapt, or replace it with an AxlFlo-native model.",
+    "Before final PPTX, run the feedback regression checks for quote placement, legal/footer placement, icon alignment, and cream-box limits."
+  ],
+  "next_artifacts": {
+    "slide_strategy_json": "decks/input-enrichment-pilots/microsoft-8-seconds/strategy.plan.json",
+    "render_json": "decks/input-enrichment-pilots/microsoft-8-seconds/content.json",
+    "layout_plan_json": "decks/input-enrichment-pilots/microsoft-8-seconds/layout.plan.json"
+  }
+}
