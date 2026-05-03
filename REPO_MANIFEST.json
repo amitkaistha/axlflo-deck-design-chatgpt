@@ -1,0 +1,35 @@
+{
+  "repo": "axlflo-v55-shift-veda-v545",
+  "version": "5.8.0",
+  "fixes_applied": [
+    "Renamed qa/engine.js to qa/qa.js",
+    "Updated package.json version from 5.3.0 to 5.4.0",
+    "Updated SLIDE_CATALOGUE.md version from 5.3 to 5.4",
+    "Aligned SKILL_merged.md gradient direction to engine.js: Coral -> Purple -> Indigo",
+    "Preserved baseline copies under baselines/v5.4",
+    "Created clean folder structure",
+    "Minor system upgrade to v5.5: card density tiers, semantic icon mapping, visual rhythm, number-led moments, strip/icon balance",
+    "Deck build updated to SHIFT-VEDA v5.4.5",
+    "Card icon pattern standardized: contextual icon above title, no inline icon-title layouts",
+    "Added creative JSON deck schema and layout-plan schema",
+    "Added explicit AxlFlo creative system principles",
+    "Added layout-plan-aware JSON renderer while preserving v5.5 visual baseline",
+    "Updated QA to support JSON manifest, render-safety checks, density warnings, and number-led rhythm warnings",
+    "Added mandatory five-step deck build workflow: build, structural QA, content/narrative QA, visual/design QA, and creative critique",
+    "Added formal feedback reinforcement loop with capture, classification, approval gate, rule promotion, and regression checks"
+  ],
+  "active_files": {
+    "engine": "lib/engine.js",
+    "qa": "qa/qa.js",
+    "skill": "skill/SKILL_merged.md",
+    "version": "version.json",
+    "changelog": "CHANGELOG.md",
+    "featureLog": "FEATURE_LOG.md",
+    "catalogue": "SLIDE_CATALOGUE.md",
+    "creativePrinciples": "docs/AXLFLO_CREATIVE_SYSTEM.md",
+    "creativeContentSchema": "schema/axlflo.creative-deck.schema.json",
+    "creativeLayoutPlanSchema": "schema/axlflo.creative-layout-plan.schema.json",
+    "jsonDeckContent": "decks/shift-to-scale-json/content.json",
+    "jsonDeckLayoutPlan": "decks/shift-to-scale-json/layout.plan.json"
+  }
+}

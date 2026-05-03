@@ -1,0 +1,30 @@
+{
+  "principles": [
+    "Fresh final build from source scripts; do not rely on prior generated JSON.",
+    "Preserve v5.8 guardrails while allowing slide-level creative choice.",
+    "Use the deck engine slide as a meta case study, not a technical tangent.",
+    "Keep the Messi metaphor as a bookend, not wallpaper.",
+    "Structural QA, feedback regression QA, and creative critique are mandatory."
+  ],
+  "slides": [
+    { "slide": 1, "render_as": "title", "creative_intent": "Premium CXO opening slide that frames AI adoption as a system-survival problem.", "density": "low", "background": "dark", "number_led": false, "visual_anchor": "logo area and strong title block" },
+    { "slide": 2, "render_as": "storyCards", "creative_intent": "Use the Messi metaphor once as a key-person-risk hook.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "quote box plus contrast cards" },
+    { "slide": 3, "render_as": "storyCards", "creative_intent": "Make AI deployment failure feel like operating risk, not training friction.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three failure cards" },
+    { "slide": 4, "render_as": "insightColumns", "creative_intent": "Show AI as an industrialiser of the operating model.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three amplifier cards" },
+    { "slide": 5, "render_as": "insightColumns", "creative_intent": "Reframe enterprise AI as operating discipline rather than software procurement.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "quote plus formula cards" },
+    { "slide": 6, "render_as": "frameworkRows", "creative_intent": "Show SHIFT as the executive architecture and failure-mode map.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "five framework rows" },
+    { "slide": 7, "render_as": "sectionDivider", "creative_intent": "Open proof layer with a shift from argument to evidence.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "large proof statement" },
+    { "slide": 8, "render_as": "storyCards", "creative_intent": "Contrast prompt stacks with governed systems.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "pull quote and three cards" },
+    { "slide": 9, "render_as": "processCycle", "creative_intent": "Show VEDA as an engineered build process with five design decisions.", "density": "high", "background": "dark", "number_led": true, "visual_anchor": "five numbered principles" },
+    { "slide": 10, "render_as": "systemArchitecture", "creative_intent": "Make VEDA look like a governed operating architecture.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "versioned vs live zones" },
+    { "slide": 11, "render_as": "frameworkRows", "creative_intent": "Map VEDA to SHIFT as built evidence.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "five mapping rows" },
+    { "slide": 12, "render_as": "processCycle", "creative_intent": "Use the deck engine as a meta case study in agentic engineering.", "density": "high", "background": "dark", "number_led": true, "visual_anchor": "five system-building principles" },
+    { "slide": 13, "render_as": "conceptMap", "creative_intent": "Translate software engineering concepts into agentic engineering practice while clarifying autonomy versus automation.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "four-column concept translation matrix" },
+    { "slide": 14, "render_as": "insightGrid", "creative_intent": "Translate VEDA lessons into CXO-level rules.", "density": "high", "background": "dark", "number_led": false, "visual_anchor": "five lesson cards" },
+    { "slide": 15, "render_as": "storyCards", "creative_intent": "Return to the Messi metaphor as payoff: raising the floor.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three outcome cards" },
+    { "slide": 16, "render_as": "roadmapPhases", "creative_intent": "Make the 12-month path sequenced and CFO-legible.", "density": "medium", "background": "white", "number_led": true, "visual_anchor": "four phases" },
+    { "slide": 17, "render_as": "numberProofCards", "creative_intent": "Close the scale argument through control, not hype.", "density": "medium", "background": "dark", "number_led": true, "visual_anchor": "three scale levers" },
+    { "slide": 18, "render_as": "ctaClosing", "creative_intent": "Close commercially while keeping the system argument alive.", "density": "medium", "background": "dark", "number_led": false, "visual_anchor": "three engagement offers" },
+    { "slide": 19, "render_as": "disclaimer", "creative_intent": "Legal and usage notes without interfering with the deck story.", "density": "high", "background": "white", "number_led": false, "visual_anchor": "clean text block" }
+  ]
+}

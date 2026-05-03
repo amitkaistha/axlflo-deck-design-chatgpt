@@ -1,0 +1,5 @@
+{
+  "specVersion": "5.8",
+  "lastUpdated": "May 2026",
+  "note": "Minor upgrade: formal feedback reinforcement loop with feedback capture, classification, approval gate, rule promotion, and regression checks after each deck iteration."
+}

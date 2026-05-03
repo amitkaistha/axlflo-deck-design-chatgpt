@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://axlflo.ai/schemas/axlflo.creative-deck.schema.json",
+  "title": "AxlFlo Creative Deck Content Schema",
+  "type": "object",
+  "required": ["deck", "slides"],
+  "additionalProperties": true,
+  "properties": {
+    "deck": {
+      "type": "object",
+      "required": ["id", "title", "brand"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "version": { "type": "string" },
+        "brand": { "type": "string" },
+        "author": { "type": "string" },
+        "email": { "type": "string" },
+        "footer": { "type": "string" },
+        "intent": { "type": "string" },
+        "source_files": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/slide" }
+    }
+  },
+  "$defs": {
+    "slide": {
+      "type": "object",
+      "required": ["type", "title"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "cover",
+            "hook",
+            "cards",
+            "insight",
+            "table",
+            "section",
+            "architecture",
+            "mapping",
+            "roadmap",
+            "cta",
+            "disclaimer"
+          ]
+        },
+        "intent": { "type": "string" },
+        "section": { "type": "string" },
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" },
+        "tagline": { "type": "string" },
+        "intro": { "type": "string" },
+        "quote": { "type": "string" },
+        "closing": { "type": "string" },
+        "body": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "cards": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/card" }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/fileComponent" }
+        },
+        "phases": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/phase" }
+        },
+        "engagements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/engagement" }
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "required": ["title", "body"],
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "icon": { "type": "string" }
+      }
+    },
+    "fileComponent": {
+      "type": "object",
+      "required": ["file", "role", "status"],
+      "additionalProperties": true,
+      "properties": {
+        "file": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string", "enum": ["Versioned", "Live"] },
+        "icon": { "type": "string" }
+      }
+    },
+    "phase": {
+      "type": "object",
+      "required": ["timeframe", "title", "body"],
+      "additionalProperties": true,
+      "properties": {
+        "timeframe": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" }
+      }
+    },
+    "engagement": {
+      "type": "object",
+      "required": ["title", "duration", "body"],
+      "additionalProperties": true,
+      "properties": {
+        "title": { "type": "string" },
+        "duration": { "type": "string" },
+        "body": { "type": "string" }
+      }
+    }
+  }
+}

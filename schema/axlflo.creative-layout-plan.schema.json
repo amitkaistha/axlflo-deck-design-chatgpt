@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://axlflo.ai/schemas/axlflo.creative-layout-plan.schema.json",
+  "title": "AxlFlo Creative Layout Plan Schema",
+  "type": "object",
+  "required": ["principles", "slides"],
+  "additionalProperties": true,
+  "properties": {
+    "principles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slide", "render_as", "creative_intent"],
+        "additionalProperties": true,
+        "properties": {
+          "slide": { "type": "integer", "minimum": 1 },
+          "render_as": { "type": "string" },
+          "creative_intent": { "type": "string" },
+          "density": { "type": "string", "enum": ["low", "medium", "high"] },
+          "background": { "type": "string", "enum": ["dark", "white"] },
+          "number_led": { "type": "boolean" },
+          "visual_anchor": { "type": "string" },
+          "must_preserve": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "avoid": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "axlflo-deck-system",
+  "version": "5.8.0",
+  "description": "AxlFlo versioned PowerPoint deck generation system",
+  "private": true,
+  "scripts": {
+    "build:process-first": "node decks/process-first/build.js",
+    "build:automate-a-mess": "node decks/automate-a-mess/build.js",
+    "qa": "node qa/qa.js",
+    "build:shift-veda": "node decks/shift-veda/build.js",
+    "build:shift-json": "node decks/shift-to-scale-json/build_from_json.js",
+    "qa:shift-json": "node qa/qa.js output/shift_to_scale_from_fresh_json.pptx output/shift_to_scale_from_fresh_json_manifest.json",
+    "qa:feedback-regression": "node qa/feedback_regression.js output/shift_to_scale_from_fresh_json.pptx output/shift_to_scale_from_fresh_json_manifest.json"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "pptxgenjs": "^3.12.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.12.0",
+    "sharp": "^0.33.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Amit Kaistha <amit.kaistha@axlflo.ai>",
+  "license": "UNLICENSED"
+}
