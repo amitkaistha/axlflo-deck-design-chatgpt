@@ -1,0 +1,28 @@
+{
+  "deck": {
+    "id": "golden-simple",
+    "title": "Golden Simple Deck",
+    "brand": "AxlFlo"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Golden Simple Deck",
+      "subtitle": "Validation fixture",
+      "tagline": "Small deck. Clear rules.",
+      "closing": "Fixture"
+    },
+    {
+      "type": "cards",
+      "section": "FIXTURE",
+      "title": "Three Simple Points",
+      "intro": "This fixture validates a normal card slide.",
+      "cards": [
+        { "title": "Point One", "body": "Required card body exists." },
+        { "title": "Point Two", "body": "Required card body exists." },
+        { "title": "Point Three", "body": "Required card body exists." }
+      ],
+      "closing": "Simple fixture passes."
+    }
+  ]
+}

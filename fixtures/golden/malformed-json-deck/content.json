@@ -1,0 +1,13 @@
+{
+  "deck": {
+    "id": "golden-malformed",
+    "brand": "AxlFlo"
+  },
+  "slides": [
+    {
+      "type": "cards",
+      "section": "BROKEN",
+      "intro": "This fixture intentionally omits title and cards so validation fails before rendering."
+    }
+  ]
+}

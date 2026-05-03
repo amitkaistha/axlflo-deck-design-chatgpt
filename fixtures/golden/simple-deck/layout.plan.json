@@ -1,0 +1,25 @@
+{
+  "principles": ["Minimal valid deck fixture."],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "title",
+      "visual_variant": "cinematic_cover",
+      "creative_intent": "Validate cover requirements.",
+      "density": "low",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "title block"
+    },
+    {
+      "slide": 2,
+      "render_as": "storyCards",
+      "visual_variant": "thesis_triptych",
+      "creative_intent": "Validate cards requirements.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "three cards"
+    }
+  ]
+}

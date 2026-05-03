@@ -1,0 +1,24 @@
+{
+  "deck": {
+    "id": "golden-dense-executive",
+    "title": "Golden Dense Executive Deck",
+    "brand": "AxlFlo"
+  },
+  "slides": [
+    {
+      "type": "table",
+      "section": "EXECUTIVE VIEW",
+      "title": "Five Decisions. One Operating Model.",
+      "intro": "This fixture validates dense framework rows without changing the visual baseline.",
+      "columns": ["Letter", "Pillar", "What It Does", "What Breaks Without It"],
+      "rows": [
+        ["S", "Strategise", "Define use cases by role before deployment.", "Deployment becomes unfocused."],
+        ["H", "Habits", "Build repeatable behaviour in real workflows.", "Knowledge stays personal."],
+        ["I", "Implement", "Add governance, review, and QA gates.", "Volume rises without trust."],
+        ["F", "Fluency", "Give each role the right execution depth.", "Training remains generic."],
+        ["T", "Track", "Measure quality and ROI.", "Adoption is claimed, not proven."]
+      ],
+      "closing": "Dense fixture passes."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "principles": ["Dense executive fixture."],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "frameworkRows",
+      "visual_variant": "framework_map",
+      "creative_intent": "Validate dense executive rows.",
+      "density": "high",
+      "background": "white",
+      "number_led": false,
+      "visual_anchor": "framework rows"
+    }
+  ]
+}

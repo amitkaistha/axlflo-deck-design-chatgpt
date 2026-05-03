@@ -1,0 +1,23 @@
+{
+  "deck": {
+    "id": "golden-card-heavy",
+    "title": "Golden Card Heavy Deck",
+    "brand": "AxlFlo"
+  },
+  "slides": [
+    {
+      "type": "cards",
+      "section": "CARD FIXTURE",
+      "title": "Five Governed Build Principles",
+      "intro": "This fixture validates high-density card handling.",
+      "cards": [
+        { "title": "Separate", "body": "Separate source, logic, rendering, and QA." },
+        { "title": "Version", "body": "Version meaningful system changes." },
+        { "title": "Govern", "body": "Define how rules change." },
+        { "title": "Test", "body": "Run checks before trust." },
+        { "title": "Learn", "body": "Promote approved feedback deliberately." }
+      ],
+      "closing": "Card-heavy fixture passes."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "principles": ["Malformed fixture should fail validation."],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "storyCards",
+      "visual_variant": "thesis_triptych",
+      "creative_intent": "This should not render.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "invalid fixture"
+    }
+  ]
+}

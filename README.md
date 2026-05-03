@@ -1,15 +1,17 @@
-# AxlFlo Deck System — v5.9
+# AxlFlo Deck System — v5.10
 
 Versioned PowerPoint deck generation. pptxgenjs + engine layer + QA.
 
 ## Mandatory deck build workflow
-Every deck build must run the full five-step workflow:
+Every deck build must run the full enforcement workflow:
 
 1. Build from the source layer (JSON, markdown, or custom script).
-2. Run structural QA.
-3. Run content/narrative QA.
-4. Run visual/design QA.
-5. Report blunt post-build critique: what works, what needs fixing, and recommended next pass.
+2. Validate deck JSON before rendering.
+3. Run structural QA.
+4. Run content/narrative QA.
+5. Run visual/design QA.
+6. Run feedback regression QA.
+7. Report blunt post-build critique: what works, what needs fixing, and recommended next pass.
 
 Structural QA is necessary, but not sufficient. A deck is not done until the creative critique is complete.
 
@@ -38,8 +40,9 @@ Proposed and experimental improvements are tracked in [FEATURE_LOG.md](FEATURE_L
 ## Quick start
 ```bash
 npm install
-node decks/process-first/build.js
-# Output: output/process_first.pptx
+npm run build
+npm run qa
+npm run qa:feedback-regression
 ```
 
 ## Slide styles → SLIDE_CATALOGUE.md

@@ -1,0 +1,15 @@
+{
+  "principles": ["Brain-led concept fixture."],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "flowRisk",
+      "visual_variant": "brain_led_concept",
+      "creative_intent": "Validate that concept slides can use a custom metaphor instead of generic cards.",
+      "density": "medium",
+      "background": "dark",
+      "number_led": false,
+      "visual_anchor": "prompt to agentic loop to governed system"
+    }
+  ]
+}

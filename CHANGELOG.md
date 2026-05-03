@@ -6,7 +6,13 @@ Detailed design deltas still live in [skill/SKILL_merged.md](skill/SKILL_merged.
 
 ## Unreleased
 
-No unreleased changes.
+v6-ready hardening on the v5.10.0 baseline.
+
+- Added pre-render JSON validation so malformed deck content fails before PowerPoint rendering.
+- Added a central slide registry mapping slide type, renderer, required fields, and approved visual variants.
+- Added npm enforcement scripts for build, structural QA, content/narrative QA, visual/design QA, feedback regression QA, and blunt creative critique.
+- Added brain-led concept slide recommendations to visual/design QA output.
+- Added golden fixture sources for simple, dense executive, card-heavy, concept/metaphor, and malformed JSON decks.
 
 ## v5.10.0 - May 2026
 

@@ -1,0 +1,15 @@
+{
+  "principles": ["Card-heavy fixture."],
+  "slides": [
+    {
+      "slide": 1,
+      "render_as": "processCycle",
+      "visual_variant": "meta_engine_process",
+      "creative_intent": "Validate five-card process rendering.",
+      "density": "high",
+      "background": "dark",
+      "number_led": true,
+      "visual_anchor": "five numbered cards"
+    }
+  ]
+}

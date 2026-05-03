@@ -1,0 +1,22 @@
+{
+  "deck": {
+    "id": "golden-concept-metaphor",
+    "title": "Golden Concept Metaphor Slide",
+    "brand": "AxlFlo"
+  },
+  "slides": [
+    {
+      "type": "cards",
+      "section": "AGENTIC SYSTEM",
+      "title": "The Agent Is Not the Magic.",
+      "intro": "This fixture protects the v5.10 brain-led concept-slide principle.",
+      "quote": "The system around the agent is the product.",
+      "cards": [
+        { "title": "Prompt", "body": "Fast output. Weak control." },
+        { "title": "Agentic Loop", "body": "Read. Plan. Build. Check. Rebuild." },
+        { "title": "Governed System", "body": "Versioning, QA, feedback, and approval." }
+      ],
+      "closing": "A governed system proves repeatability."
+    }
+  ]
+}

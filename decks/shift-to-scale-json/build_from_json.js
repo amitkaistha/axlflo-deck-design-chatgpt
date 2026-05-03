@@ -28,6 +28,8 @@ const {
   FiZap
 } = require("react-icons/fi");
 const E = require("../../lib/engine");
+const { formatValidationReport, validateDeckFiles } = require("../../lib/deckValidation");
+const { getRendererForSlide } = require("../../lib/slideRegistry");
 
 const repoRoot = path.resolve(__dirname, "../..");
 const deckDir = process.env.AXLFLO_DECK_DIR
@@ -44,10 +46,13 @@ const manifestPath = path.join(outDir, `${outputBase}_manifest.json`);
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
-const deckJson = JSON.parse(fs.readFileSync(inputPath, "utf8"));
-const layoutPlan = fs.existsSync(layoutPlanPath)
-  ? JSON.parse(fs.readFileSync(layoutPlanPath, "utf8"))
-  : { principles: [], slides: [] };
+const validation = validateDeckFiles(inputPath, layoutPlanPath);
+console.log(formatValidationReport(validation, path.basename(inputPath)));
+if (!validation.ok) process.exit(1);
+validation.warnings.forEach(warning => console.warn(`Pre-render validation warning: ${warning}`));
+
+const deckJson = validation.deckJson;
+const layoutPlan = validation.layoutPlan;
 const planBySlide = new Map((layoutPlan.slides || []).map(plan => [plan.slide, plan]));
 const slides = (deckJson.slides || []).map((slide, idx) => ({
   ...slide,
@@ -742,51 +747,35 @@ function renderDisclaimer(s, i, gb) {
   addFooter(sl, i, false, LEGAL_FOOTER);
 }
 
+const RENDERERS = {
+  title: renderCover,
+  storyCards: (s, i, gb) => s.type === "hook" ? renderHook(s, i, gb) : renderCards(s, i, gb),
+  insightColumns: (s, i, gb) => s.type === "insight" ? renderInsight(s, i, gb) : renderCards(s, i, gb),
+  insightGrid: renderCards,
+  frameworkRows: (s, i, gb) => s.type === "mapping" ? renderMapping(s, i, gb) : renderTable(s, i, gb),
+  sectionDivider: renderSection,
+  processCycle: renderCards,
+  systemArchitecture: renderArchitecture,
+  conceptMap: renderConceptMap,
+  numberLed: renderNumberLed,
+  spectrum: renderSpectrum,
+  curve: renderCurve,
+  flowRisk: renderFlowRisk,
+  courtroom: renderCourtroom,
+  stack: renderStack,
+  truthGap: renderTruthGap,
+  flywheel: renderFlywheel,
+  roadmapPhases: renderRoadmap,
+  numberProofCards: renderCards,
+  ctaClosing: renderCTA,
+  disclaimer: renderDisclaimer
+};
+
 function renderSlide(s, i, gb) {
-  const renderAs = s.layout_plan?.render_as || s.type;
-  switch (renderAs) {
-    case "title": return renderCover(s, i, gb);
-    case "storyCards": return s.type === "hook" ? renderHook(s, i, gb) : renderCards(s, i, gb);
-    case "insightColumns": return s.type === "insight" ? renderInsight(s, i, gb) : renderCards(s, i, gb);
-    case "insightGrid": return renderCards(s, i, gb);
-    case "frameworkRows": return s.type === "mapping" ? renderMapping(s, i, gb) : renderTable(s, i, gb);
-    case "sectionDivider": return renderSection(s, i, gb);
-    case "processCycle": return renderCards(s, i, gb);
-    case "systemArchitecture": return renderArchitecture(s, i, gb);
-    case "conceptMap": return renderConceptMap(s, i, gb);
-    case "numberLed": return renderNumberLed(s, i, gb);
-    case "spectrum": return renderSpectrum(s, i, gb);
-    case "curve": return renderCurve(s, i, gb);
-    case "flowRisk": return renderFlowRisk(s, i, gb);
-    case "courtroom": return renderCourtroom(s, i, gb);
-    case "stack": return renderStack(s, i, gb);
-    case "truthGap": return renderTruthGap(s, i, gb);
-    case "flywheel": return renderFlywheel(s, i, gb);
-    case "roadmapPhases": return renderRoadmap(s, i, gb);
-    case "numberProofCards": return renderCards(s, i, gb);
-    case "ctaClosing": return renderCTA(s, i, gb);
-    case "cover": return renderCover(s, i, gb);
-    case "hook": return renderHook(s, i, gb);
-    case "cards": return renderCards(s, i, gb);
-    case "insight": return renderInsight(s, i, gb);
-    case "table": return renderTable(s, i, gb);
-    case "section": return renderSection(s, i, gb);
-    case "architecture": return renderArchitecture(s, i, gb);
-    case "mapping": return renderMapping(s, i, gb);
-    case "conceptMap": return renderConceptMap(s, i, gb);
-    case "numberLed": return renderNumberLed(s, i, gb);
-    case "spectrum": return renderSpectrum(s, i, gb);
-    case "curve": return renderCurve(s, i, gb);
-    case "flowRisk": return renderFlowRisk(s, i, gb);
-    case "courtroom": return renderCourtroom(s, i, gb);
-    case "stack": return renderStack(s, i, gb);
-    case "truthGap": return renderTruthGap(s, i, gb);
-    case "flywheel": return renderFlywheel(s, i, gb);
-    case "roadmap": return renderRoadmap(s, i, gb);
-    case "cta": return renderCTA(s, i, gb);
-    case "disclaimer": return renderDisclaimer(s, i, gb);
-    default: throw new Error(`Unsupported JSON slide type: ${s.type}`);
-  }
+  const renderAs = getRendererForSlide(s, s.layout_plan || {});
+  const renderer = RENDERERS[renderAs];
+  if (!renderer) throw new Error(`Unsupported renderer "${renderAs}" for slide ${i} [${s.type}]`);
+  return renderer(s, i, gb);
 }
 
 async function main() {
@@ -805,7 +794,7 @@ async function main() {
     principles: layoutPlan.principles || [],
     slides: slides.map((s, idx) => ({
       num: idx + 1,
-      type: s.layout_plan?.render_as || s.type,
+      type: getRendererForSlide(s, s.layout_plan || {}),
       label: s.title,
       bg: s.layout_plan?.background || (["table", "architecture", "mapping", "roadmap", "disclaimer"].includes(s.type) ? "white" : "dark"),
       gradientBar: true,
@@ -816,7 +805,11 @@ async function main() {
       visual_repeat_reason: s.layout_plan?.visual_repeat_reason || null
     })),
     visual_diversity: layoutPlan.visual_diversity || null,
-    slide_types: slides.map((s, idx) => ({ slide: idx + 1, type: s.type, render_as: s.layout_plan?.render_as || s.type, title: s.title }))
+    validation: {
+      pre_render: "passed",
+      warnings: validation.warnings
+    },
+    slide_types: slides.map((s, idx) => ({ slide: idx + 1, type: s.type, render_as: getRendererForSlide(s, s.layout_plan || {}), title: s.title }))
   }, null, 2));
   console.log(`Built ${outputPath}`);
   console.log(`Manifest ${manifestPath}`);
