@@ -12,6 +12,7 @@ Feature governance.
 - Added status, risk, quality gate, and promotion rules for future agentic-engineering improvements.
 - Added first feature backlog covering feedback regression checks, Agentic Decision Records, visual QA artifacts, slide strategy layer, golden fixtures, autonomy contract, content QA rubric, and screenshot review workflow.
 - Added trial executable feedback regression checker at [qa/feedback_regression.js](qa/feedback_regression.js), exposed as `npm run qa:feedback-regression`.
+- Added input enrichment workflow and schema so raw text is converted into a structured argument brief before slide JSON is created.
 
 ## v5.8.0 - May 2026
 

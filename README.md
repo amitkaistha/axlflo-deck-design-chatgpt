@@ -23,6 +23,9 @@ After every reviewed deck iteration, capture feedback in `docs/FEEDBACK_LOOP.md`
 
 Approved reusable feedback becomes part of the spec, checklist, renderer, QA, or slide catalogue. Each later build must check that approved feedback did not regress.
 
+## Input enrichment
+Raw text should not be converted directly into slides. First convert it into an enriched argument brief using [docs/INPUT_ENRICHMENT_WORKFLOW.md](docs/INPUT_ENRICHMENT_WORKFLOW.md) and [schema/axlflo.enriched-brief.schema.json](schema/axlflo.enriched-brief.schema.json).
+
 ## Changelog
 System version changes are summarized in [CHANGELOG.md](CHANGELOG.md). Detailed design deltas remain in `skill/SKILL_merged.md`.
 

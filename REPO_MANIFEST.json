@@ -29,6 +29,8 @@
     "creativePrinciples": "docs/AXLFLO_CREATIVE_SYSTEM.md",
     "creativeContentSchema": "schema/axlflo.creative-deck.schema.json",
     "creativeLayoutPlanSchema": "schema/axlflo.creative-layout-plan.schema.json",
+    "enrichedBriefSchema": "schema/axlflo.enriched-brief.schema.json",
+    "inputEnrichmentWorkflow": "docs/INPUT_ENRICHMENT_WORKFLOW.md",
     "jsonDeckContent": "decks/shift-to-scale-json/content.json",
     "jsonDeckLayoutPlan": "decks/shift-to-scale-json/layout.plan.json"
   }
