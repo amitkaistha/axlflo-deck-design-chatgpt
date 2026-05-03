@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://axlflo.ai/schemas/axlflo.visual-variants.json",
+  "title": "AxlFlo Visual Variant Catalogue",
+  "version": "5.9.0",
+  "purpose": "Approved visual vocabulary for premium CXO deck generation.",
+  "selection_rules": [
+    "Do not use the same visual pattern on 2+ consecutive slides unless explicitly approved.",
+    "Match visual pattern to narrative role.",
+    "Use approved premium variants before inventing new renderers.",
+    "Experimental variants require visual approval before client-facing use."
+  ],
+  "approved_variants": [
+    {
+      "id": "cinematic_cover",
+      "name": "Cinematic Cover",
+      "narrative_role": "Open with brand and tension",
+      "best_for": ["title", "section_open", "premium_thesis"],
+      "preferred_render_as": ["title", "sectionDivider"],
+      "references": ["SHIFT v3 slide 1", "System Behind Star slide 1"]
+    },
+    {
+      "id": "evidence_dashboard",
+      "name": "Evidence Dashboard",
+      "narrative_role": "Prove urgency with numbers",
+      "best_for": ["adoption_problem", "market_data", "survey_proof"],
+      "preferred_render_as": ["numberProofCards", "frameworkRows"],
+      "references": ["SHIFT v3 slide 2", "System Behind Star slide 4"]
+    },
+    {
+      "id": "thesis_triptych",
+      "name": "Thesis Triptych",
+      "narrative_role": "Explain a three-part truth",
+      "best_for": ["problem_framing", "amplifier_logic", "failure_modes"],
+      "preferred_render_as": ["storyCards", "insightColumns"],
+      "references": ["SHIFT v3 slide 3", "System Behind Star slides 3 and 5"]
+    },
+    {
+      "id": "instrument_panel",
+      "name": "Instrument / Assessment Panel",
+      "narrative_role": "Show a gap, score, or diagnosis",
+      "best_for": ["adoption_gap", "maturity_scan", "readiness_assessment"],
+      "preferred_render_as": ["frameworkRows", "storyCards"],
+      "references": ["SHIFT v3 slide 4"]
+    },
+    {
+      "id": "framework_map",
+      "name": "Framework Map",
+      "narrative_role": "Introduce methodology and outcome logic",
+      "best_for": ["framework", "pillars", "operating_model"],
+      "preferred_render_as": ["frameworkRows", "conceptMap"],
+      "references": ["SHIFT v3 slide 5", "System Behind Star slide 8"]
+    },
+    {
+      "id": "metrics_proof_grid",
+      "name": "Metrics Proof Grid",
+      "narrative_role": "Show measured impact",
+      "best_for": ["productivity_proof", "case_metrics", "adoption_evidence"],
+      "preferred_render_as": ["numberProofCards", "frameworkRows"],
+      "references": ["SHIFT v3 slide 6"]
+    },
+    {
+      "id": "journey_map",
+      "name": "Journey Map",
+      "narrative_role": "Show destination-state transformation",
+      "best_for": ["future_state", "vision", "multi_phase_path"],
+      "preferred_render_as": ["roadmapPhases"],
+      "references": ["SHIFT v3 slide 7"]
+    },
+    {
+      "id": "sprint_roadmap",
+      "name": "Sprint Roadmap",
+      "narrative_role": "Convert strategy into phased delivery",
+      "best_for": ["implementation_plan", "activation_sprint", "delivery_path"],
+      "preferred_render_as": ["roadmapPhases"],
+      "references": ["SHIFT v3 slide 8", "System Behind Star slide 14"]
+    },
+    {
+      "id": "layered_operating_system",
+      "name": "Layered Operating System",
+      "narrative_role": "Show capability layers",
+      "best_for": ["ai_os", "workflow_layers", "enterprise_stack"],
+      "preferred_render_as": ["systemArchitecture", "frameworkRows"],
+      "references": ["SHIFT v3 slide 9"]
+    },
+    {
+      "id": "strategic_upside_grid",
+      "name": "Strategic Upside Grid",
+      "narrative_role": "Show commercial or ecosystem upside",
+      "best_for": ["customer_zero", "board_upside", "platform_advantage"],
+      "preferred_render_as": ["insightGrid", "frameworkRows"],
+      "references": ["SHIFT v3 slide 10"]
+    },
+    {
+      "id": "credentials_proof",
+      "name": "Credentials Proof",
+      "narrative_role": "Establish credibility with case evidence",
+      "best_for": ["track_record", "case_study", "founder_credibility"],
+      "preferred_render_as": ["insightGrid", "numberProofCards"],
+      "references": ["SHIFT v3 slides 11-12"]
+    },
+    {
+      "id": "architecture_board",
+      "name": "Architecture Board",
+      "narrative_role": "Show a governed system with boundaries",
+      "best_for": ["files", "rules", "qa", "versioned_components"],
+      "preferred_render_as": ["systemArchitecture"],
+      "references": ["System Behind Star slide 10"]
+    },
+    {
+      "id": "meta_engine_process",
+      "name": "Meta Engine Process",
+      "narrative_role": "Show how the system was built",
+      "best_for": ["agentic_engineering", "feedback_loop", "governed_generation"],
+      "preferred_render_as": ["processCycle"],
+      "references": ["System Behind Star slide 11"]
+    },
+    {
+      "id": "translation_matrix",
+      "name": "Translation Matrix",
+      "narrative_role": "Translate one discipline into another",
+      "best_for": ["concept_translation", "software_to_agentic", "executive_payoff"],
+      "preferred_render_as": ["conceptMap"],
+      "references": ["System Behind Star slide 12"]
+    },
+    {
+      "id": "outcome_ladder",
+      "name": "Outcome Ladder",
+      "narrative_role": "Show compounding outcome",
+      "best_for": ["star_to_system", "capability_lift", "enterprise_floor"],
+      "preferred_render_as": ["insightColumns", "storyCards"],
+      "references": ["System Behind Star slide 13"]
+    },
+    {
+      "id": "commercial_cta_packages",
+      "name": "Commercial CTA Packages",
+      "narrative_role": "Convert argument into buying path",
+      "best_for": ["offers", "discovery", "pilot", "scale_programme"],
+      "preferred_render_as": ["ctaClosing"],
+      "references": ["System Behind Star slide 15"]
+    },
+    {
+      "id": "use_case_deep_dive",
+      "name": "Use Case Deep Dive",
+      "narrative_role": "Make a use case tangible by role",
+      "best_for": ["hr", "ites", "role_specific_adoption"],
+      "preferred_render_as": ["frameworkRows", "insightGrid"],
+      "references": ["SHIFT v3 slides 15-16"]
+    },
+    {
+      "id": "disclaimer_appendix",
+      "name": "Disclaimer / Appendix",
+      "narrative_role": "Legal and usage notes",
+      "best_for": ["disclaimer", "source_notes", "appendix"],
+      "preferred_render_as": ["disclaimer"],
+      "references": ["Both reference decks"]
+    }
+  ],
+  "experimental_variants": [
+    "numberLed",
+    "spectrum",
+    "curve",
+    "flowRisk",
+    "courtroom",
+    "stack",
+    "truthGap",
+    "flywheel"
+  ]
+}

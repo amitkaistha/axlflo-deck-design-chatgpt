@@ -42,7 +42,24 @@ These items must be checked in every future AxlFlo deck build.
 | AFL-FB-002 | Normal slides must not repeat the legal/framework footer. Legal text belongs on the disclaimer slide unless explicitly requested. | global_system | JSON renderer, deck content convention | PPTX text scan: legal statement appears only on disclaimer slide. |
 | AFL-FB-003 | A slide may have at most one `#F5EDD6` cream quote/takeaway box. The bottom reserved area carries a takeaway, not a second cream box. | global_system | JSON renderer | PPTX color scan: no non-disclaimer slide has more than one `F5EDD6` fill. |
 | AFL-FB-004 | Card slides should use semantic icons where they clarify the concept; missing icons are a visual QA issue. | deck_family | JSON renderer icon mapping | Visual QA checks card slides for icon presence and semantic fit. |
+| AFL-FB-005 | Do not allow 2+ consecutive slides to use the same visual pattern unless the layout plan explicitly approves the repeat. Prefer approved premium variants from the visual catalogue before inventing new layouts. | global_system | QA visual diversity rule, layout.plan.json visual_diversity block, VISUAL_VARIANT_CATALOGUE.md | Manifest QA fails unapproved consecutive repeated render patterns when `visual_diversity.max_consecutive_same_render` is `1`. |
+| AFL-FB-006 | Use brain-led creative concept slides when the idea needs more than a catalogue layout. The slide catalogue is a renderer vocabulary, not the creative ceiling. Custom slides are encouraged when they make the argument clearer, sharper, or more memorable, but they must still pass structural QA and fit AxlFlo visual principles. | global_system | FEEDBACK_LOOP.md, AXLFLO_CREATIVE_SYSTEM.md | Visual/design QA checks whether key concept slides were allowed a custom visual metaphor instead of being forced into generic cards. |
 
 ## Open Feedback Log
 
-No open items.
+```text
+ID: AFL-FB-006
+Date: 2026-05-03
+Deck/build: agentic_deck_system_single_slide.pptx
+Source: Amit
+Feedback: The single slide worked because it was built with creative judgment, not mechanically from the catalogue. This is the kind of work Amit wants more of.
+Why it matters: The deck system must preserve creative intelligence. Templates create consistency, but the strongest slides often come from translating the idea into a custom visual metaphor.
+Scope: global_system
+Severity: important
+Classification: promote_to_rule
+Approval status: approved
+Action taken: Promoted to approved feedback register as AFL-FB-006.
+Files changed: docs/FEEDBACK_LOOP.md, docs/AXLFLO_CREATIVE_SYSTEM.md
+Verification: The agentic deck system slide passed structural QA with 8 passed, 0 warnings, 0 failures.
+Regression check for next build: During visual/design QA, identify whether key thesis or concept slides deserve a custom visual treatment instead of a catalogue layout.
+```

@@ -74,6 +74,22 @@ function runQA(pptxPath, manifestPath) {
     ? pass(`Slide count: ${slideEntries.length} (expected ${expectedSlides})`)
     : fail(`Slide count: found ${slideEntries.length}, expected ${expectedSlides}`);
 
+  if (manifest.visual_diversity?.max_consecutive_same_render === 1) {
+    const checkedSlides = (manifest.slides || []).filter(slide => !slide.visual_diversity_exempt);
+    for (let idx = 1; idx < checkedSlides.length; idx++) {
+      const prev = checkedSlides[idx - 1];
+      const curr = checkedSlides[idx];
+      const repeated = prev.type === curr.type;
+      const approved = Boolean(prev.allow_visual_repeat || curr.allow_visual_repeat);
+      if (repeated && !approved) {
+        fail(`Visual diversity: slides ${prev.num}-${curr.num} repeat [${curr.type}] without approval`);
+      } else if (repeated && approved) {
+        pass(`Visual diversity: slides ${prev.num}-${curr.num} repeat [${curr.type}] with approval`);
+      }
+    }
+    pass("Visual diversity rule active: no unapproved consecutive repeated render patterns");
+  }
+
   // ── Per-slide checks ────────────────────────────────────────────────────────
   (manifest.slides || []).forEach(slide => {
     const xml  = zip.readAsText(`ppt/slides/slide${slide.num}.xml`);
